@@ -1,1 +1,44 @@
-<p>list works!</p>
+<table
+  mat-table
+  [dataSource]="dataSource"
+  multiTemplateDataRows
+  class="mat-elevation-z8 w-6/12 ml-auto mr-auto"
+>
+  <ng-container
+    matColumnDef="{{ column.value }}"
+    *ngFor="let column of columnsToDisplay"
+  >
+    <th mat-header-cell *matHeaderCellDef>{{ column.label }}</th>
+    <td mat-cell *matCellDef="let element">{{ element[column.value] }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="expandedDetail">
+    <td
+      mat-cell
+      *matCellDef="let element"
+      [attr.colspan]="columnsValues.length"
+    >
+      <div
+        class="overflow-hidden"
+        [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'"
+      >
+        <div class="p-3">{{ element.answer }}</div>
+      </div>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="columnsValues"></tr>
+  <tr
+    mat-row
+    *matRowDef="let element; columns: columnsValues"
+    class="example-element-row"
+    [class.example-expanded-row]="expandedElement === element"
+    (click)="expandedElement = expandedElement === element ? null : element"
+  ></tr>
+
+  <tr
+    mat-row
+    *matRowDef="let row; columns: ['expandedDetail']"
+    class="example-detail-row"
+  ></tr>
+</table>

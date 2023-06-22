@@ -11,15 +11,7 @@ import {
 export const selectQuestionsListState =
   createFeatureSelector<QuestionsListState>('questionsList');
 
-export interface QuestionsListStateReducers {
-  questionsList: QuestionsListState;
-}
-
-export const reducers = combineReducers<QuestionsListStateReducers>({
-  questionsList: questionsListReducer,
-});
-
-export const selectQuestionsList = createSelector(
+export const selectQuestions = createSelector(
   selectQuestionsListState,
-  (state) => state?.list
+  (state: QuestionsListState) => state.list
 );

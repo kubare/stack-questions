@@ -32,9 +32,9 @@ export const questionsListReducer = createReducer(
   ),
   on(
     QuestionsListSuccess,
-    (state, { list }): QuestionsListState => ({
+    (state, action): QuestionsListState => ({
       ...state,
-      list,
+      list: action.list,
       loadState: LoadingState.SUCCESS,
       error: null,
     })
