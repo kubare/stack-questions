@@ -1,0 +1,31 @@
+<div class="box">
+  <h2>Wygenerowane pytanie</h2>
+  <div *ngIf="!showSpinner; else spinner">
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title> {{ singleRandQuestion!.title }} </mat-panel-title>
+          <mat-panel-description>
+            <ng-container *ngFor="let tag of singleRandQuestion!.tags">
+              {{ tag }}
+            </ng-container>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p class="pt-5">{{ singleRandQuestion!.answer }}</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+
+  <ng-template #spinner>
+    <div class="box__spinner">
+      <mat-spinner [diameter]="50"></mat-spinner>
+    </div>
+  </ng-template>
+
+  <div class="box__buttons">
+    <button mat-raised-button (click)="handleCancel()">Zamknij</button>
+    <button mat-flat-button color="primary" (click)="getRandomQuestion()">
+      Losuj kolejne pytanie
+    </button>
+  </div>
+</div>

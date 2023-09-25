@@ -50,15 +50,15 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { questionsListReducer } from './components/list/data-access/store/questions-list.reducer';
+import { QuestionDialogComponent } from './components/question-dialog/question-dialog.component';
 
 @NgModule({
-  declarations: [HomeComponent, ListComponent],
+  declarations: [HomeComponent, ListComponent, QuestionDialogComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
     StoreModule.forFeature('questionsList', questionsListReducer),
     EffectsModule.forFeature([QuestionsListEffects]),
-
     A11yModule,
     ClipboardModule,
     CdkStepperModule,
