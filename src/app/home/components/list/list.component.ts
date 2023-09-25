@@ -27,7 +27,7 @@ import { selectQuestions } from './data-access/store/questions-list.selectors';
     ]),
   ],
 })
-export class ListComponent implements OnInit, OnDestroy {
+export class ListComponent {
   questionsList$: Observable<QuestionsList[]>;
   dataSource: QuestionsList[];
   columnsToDisplay = [
@@ -37,22 +37,17 @@ export class ListComponent implements OnInit, OnDestroy {
   columnsValues = this.columnsToDisplay.map((a) => a.value);
   expandedElement: QuestionsList | null;
   destroy$ = new Subject();
-
   constructor(private store: Store) {}
-
   ngOnInit(): void {
     this.store.dispatch(QuestionsListLoad());
     this.questionsList$ = this.store.select(selectQuestions);
-
     this.addQuestionsToTable();
   }
-
   addQuestionsToTable(): void {
     this.questionsList$
       .pipe(takeUntil(this.destroy$))
       .subscribe((questions) => (this.dataSource = questions));
   }
-
   ngOnDestroy() {
     this.destroy$.next(true);
     this.destroy$.complete();

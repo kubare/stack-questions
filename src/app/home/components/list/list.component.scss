@@ -10,11 +10,31 @@ tr.example-element-row:not(.example-expanded-row):hover {
   border-bottom-width: 0;
 }
 
-.list {
-  padding-top: 100px;
-}
-
 .mat-table{
   border-radius: 6px;
   overflow: hidden !important;
+}
+
+.box {
+  display: flex;
+  padding-top: 100px;
+
+  &__buttons{
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 8px;
+  }
+
+}
+
+.flex-box:nth-child(1) {
+  width: 25%;
+}
+
+.flex-box:nth-child(2) {
+  width: 50%;
+}
+
+.flex-box:nth-child(3) {
+  width: 25%;
 }
