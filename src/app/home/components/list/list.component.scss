@@ -1,0 +1,20 @@
+tr.example-detail-row {
+  height: 0;
+}
+
+tr.example-element-row:not(.example-expanded-row):hover {
+  background: whitesmoke;
+}
+
+.example-element-row td {
+  border-bottom-width: 0;
+}
+
+.list {
+  padding-top: 100px;
+}
+
+.mat-table{
+  border-radius: 6px;
+  overflow: hidden !important;
+}
