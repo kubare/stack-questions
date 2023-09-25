@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { QuestionsListLoad } from '../data-access/store/questions-list.actions';
+import { QuestionsListLoad } from './data-access/store/questions-list.actions';
 import {
   animate,
   state,
@@ -8,9 +8,9 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
-import { QuestionsList } from '../models/questions-list.interface';
+import { QuestionsList } from './models/questions-list.interface';
 import { Observable, Subject, takeUntil, tap, toArray } from 'rxjs';
-import { selectQuestions } from '../data-access/store/questions-list.selectors';
+import { selectQuestions } from './data-access/store/questions-list.selectors';
 
 @Component({
   selector: 'app-list',

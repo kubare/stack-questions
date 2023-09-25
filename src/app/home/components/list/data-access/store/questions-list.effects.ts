@@ -15,7 +15,6 @@ export class QuestionsListEffects {
       ofType(QuestionsListLoad),
       mergeMap(() =>
         this.service.get().pipe(
-          tap((res) => console.log(res)),
           map((list) => QuestionsListSuccess({ list })),
           catchError((error) => of(QuestionsListFail({ error })))
         )

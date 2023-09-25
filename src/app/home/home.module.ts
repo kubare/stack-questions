@@ -5,7 +5,7 @@ import { HomeComponent } from './home.component';
 import { ListComponent } from './components/list/list.component';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
-import { QuestionsListEffects } from './components/data-access/store/questions-list.effects';
+import { QuestionsListEffects } from './components/list/data-access/store/questions-list.effects';
 
 import { A11yModule } from '@angular/cdk/a11y';
 import { ClipboardModule } from '@angular/cdk/clipboard';
@@ -49,7 +49,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
-import { questionsListReducer } from './components/data-access/store/questions-list.reducer';
+import { questionsListReducer } from './components/list/data-access/store/questions-list.reducer';
 
 @NgModule({
   declarations: [HomeComponent, ListComponent],
