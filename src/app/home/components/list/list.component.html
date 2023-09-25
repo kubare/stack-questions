@@ -2,7 +2,9 @@
   <div class="flex-box"></div>
   <div class="flex-box">
     <div class="box__buttons">
-      <button mat-flat-button color="primary">Losuj pytanie</button>
+      <button mat-flat-button color="primary" (click)="openDialog()">
+        Losuj pytanie
+      </button>
     </div>
     <table
       mat-table

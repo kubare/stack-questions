@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { QuestionsListLoad } from './data-access/store/questions-list.actions';
 import {
@@ -11,6 +11,8 @@ import {
 import { QuestionsList } from './models/questions-list.interface';
 import { Observable, Subject, takeUntil, tap, toArray } from 'rxjs';
 import { selectQuestions } from './data-access/store/questions-list.selectors';
+import { MatDialog } from '@angular/material/dialog';
+import { QuestionDialogComponent } from '../question-dialog/question-dialog.component';
 
 @Component({
   selector: 'app-list',
@@ -37,17 +39,34 @@ export class ListComponent {
   columnsValues = this.columnsToDisplay.map((a) => a.value);
   expandedElement: QuestionsList | null;
   destroy$ = new Subject();
-  constructor(private store: Store) {}
+
+  constructor(private store: Store, public dialog: MatDialog) {}
+
   ngOnInit(): void {
     this.store.dispatch(QuestionsListLoad());
     this.questionsList$ = this.store.select(selectQuestions);
     this.addQuestionsToTable();
   }
+
+  openDialog(): void {
+    this.questionsList$
+      .pipe(
+        tap((questions) => {
+          this.dialog.open(QuestionDialogComponent, {
+            data: questions,
+            width: '900px',
+          });
+        })
+      )
+      .subscribe();
+  }
+
   addQuestionsToTable(): void {
     this.questionsList$
       .pipe(takeUntil(this.destroy$))
       .subscribe((questions) => (this.dataSource = questions));
   }
+
   ngOnDestroy() {
     this.destroy$.next(true);
     this.destroy$.complete();
