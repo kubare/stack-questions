@@ -1,20 +1,17 @@
-.test {
-  padding-top: 30px;
-}
-
 .box {
   display: flex;
   flex-direction: column;
   gap: 25px;
-}
-.dialog-buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 10px;
-}
 
-.spinner {
-  display: flex;
-  justify-content: center;
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__spinner {
+    display: flex;
+    justify-content: center;
+  }
 }

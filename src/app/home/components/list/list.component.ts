@@ -56,7 +56,8 @@ export class ListComponent {
             data: questions,
             width: '900px',
           });
-        })
+        }),
+        takeUntil(this.destroy$)
       )
       .subscribe();
   }

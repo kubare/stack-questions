@@ -11,16 +11,18 @@
             </ng-container>
           </mat-panel-description>
         </mat-expansion-panel-header>
-        <p class="test">{{ singleRandQuestion!.answer }}</p>
+        <p class="pt-5">{{ singleRandQuestion!.answer }}</p>
       </mat-expansion-panel>
     </mat-accordion>
   </div>
 
   <ng-template #spinner>
-    <div class="spinner"><mat-spinner [diameter]="50"> </mat-spinner></div>
+    <div class="box__spinner">
+      <mat-spinner [diameter]="50"></mat-spinner>
+    </div>
   </ng-template>
 
-  <div class="dialog-buttons">
+  <div class="box__buttons">
     <button mat-raised-button (click)="handleCancel()">Zamknij</button>
     <button mat-flat-button color="primary" (click)="getRandomQuestion()">
       Losuj kolejne pytanie

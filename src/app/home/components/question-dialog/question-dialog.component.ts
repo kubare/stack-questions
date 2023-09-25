@@ -11,7 +11,8 @@ import { tap, timer } from 'rxjs';
 })
 export class QuestionDialogComponent implements OnInit {
   @ViewChild(MatExpansionPanel) expansionPanel: MatExpansionPanel;
-  singleRandQuestion: QuestionsList | null = null;
+  singleRandQuestion: QuestionsList | null =
+    this.data[Math.floor(Math.random() * this.data.length)];
   panelOpenState = false;
   showSpinner = false;
 
@@ -20,10 +21,7 @@ export class QuestionDialogComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: QuestionsList[]
   ) {}
 
-  ngOnInit(): void {
-    this.singleRandQuestion =
-      this.data[Math.floor(Math.random() * this.data.length)];
-  }
+  ngOnInit(): void {}
 
   getRandomQuestion() {
     this.singleRandQuestion =
