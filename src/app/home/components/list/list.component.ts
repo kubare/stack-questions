@@ -39,10 +39,6 @@ export class ListComponent {
   columnsValues = this.columnsToDisplay.map((a) => a.value);
   expandedElement: QuestionsList | null;
   destroy$ = new Subject();
-  maxWidth = 1000;
-  maxHeight = 1000;
-  screenWidth: number = window.innerWidth;
-  screenHeight: number = window.innerHeight;
 
   constructor(private store: Store, public dialog: MatDialog) {}
 
