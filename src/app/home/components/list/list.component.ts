@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { QuestionsListLoad } from './data-access/store/questions-list.actions';
 import {

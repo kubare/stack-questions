@@ -2,7 +2,6 @@ import { Component, Inject, OnInit, ViewChild } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { QuestionsList } from '../list/models/questions-list.interface';
 import { MatExpansionPanel } from '@angular/material/expansion';
-import { tap, timer } from 'rxjs';
 
 @Component({
   selector: 'app-question-dialog',

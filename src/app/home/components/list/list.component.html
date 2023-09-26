@@ -33,6 +33,14 @@
             "
           >
             <div class="p-3">{{ element.answer }}</div>
+            <ul *ngFor="let subPoint of element.subpoints">
+              <li>{{ subPoint }}</li>
+            </ul>
+            <img
+              *ngIf="element.image"
+              class="box__image p-5"
+              src="{{ element.image }}"
+            />
           </div>
         </td>
       </ng-container>
