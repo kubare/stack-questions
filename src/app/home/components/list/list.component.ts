@@ -15,12 +15,12 @@ import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { QuestionsList } from './models/questions-list.interface';
 import { Observable, Subject, map, startWith, takeUntil, tap } from 'rxjs';
 import { selectQuestions } from './data-access/store/questions-list.selectors';
-import { MatDialog } from '@angular/material/dialog';
+import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
 import { QuestionDialogComponent } from '../question-dialog/question-dialog.component';
 import { UntypedFormControl } from '@angular/forms';
 import { LiveAnnouncer } from '@angular/cdk/a11y';
-import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
-import { MatChipInputEvent } from '@angular/material/chips';
+import { MatLegacyAutocompleteSelectedEvent as MatAutocompleteSelectedEvent } from '@angular/material/legacy-autocomplete';
+import { MatLegacyChipInputEvent as MatChipInputEvent } from '@angular/material/legacy-chips';
 
 @Component({
   selector: 'app-list',

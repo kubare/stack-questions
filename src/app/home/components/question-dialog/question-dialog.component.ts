@@ -1,5 +1,5 @@
 import { Component, Inject, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { MAT_LEGACY_DIALOG_DATA as MAT_DIALOG_DATA, MatLegacyDialogRef as MatDialogRef } from '@angular/material/legacy-dialog';
 import { QuestionsList } from '../list/models/questions-list.interface';
 import { MatExpansionPanel } from '@angular/material/expansion';
 import { Observable, Subject, takeUntil, tap } from 'rxjs';

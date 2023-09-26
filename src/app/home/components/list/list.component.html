@@ -1,4 +1,4 @@
-<div class="box">
+<!-- <div class="box">
   <div class="flex-box"></div>
   <div class="flex-box">
     <div>
@@ -9,6 +9,27 @@
           [formControl]="searchQuestionTitle"
           placeholder="Nazwa pytania"
         />
+      </mat-form-field>
+
+      <mat-form-field class="example-chip-list" appearance="outline">
+        <mat-label>Favorite Fruits</mat-label>
+        <mat-chip-grid #chipGrid aria-label="Fruit selection">
+          <mat-chip-row *ngFor="let fruit of fruits" (removed)="remove(fruit)">
+            {{fruit}}
+            <button matChipRemove [attr.aria-label]="'remove ' + fruit">
+              <mat-icon>cancel</mat-icon>
+            </button>
+          </mat-chip-row>
+        </mat-chip-grid>
+        <input placeholder="New Fruit..." #fruitInput [formControl]="fruitCtrl"
+          [matChipInputFor]="chipGrid" [matAutocomplete]="auto"
+          [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+          (matChipInputTokenEnd)="add($event)"/>
+        <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+          <mat-option *ngFor="let fruit of filteredFruits | async" [value]="fruit">
+            {{fruit}}
+          </mat-option>
+        </mat-autocomplete>
       </mat-form-field>
     </div>
     <div class="box__buttons">
@@ -90,4 +111,4 @@
     </table>
   </div>
   <div class="flex-box"></div>
-</div>
+</div> -->
