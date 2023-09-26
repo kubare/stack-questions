@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { AsyncPipe, CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { ListComponent } from './components/list/list.component';
@@ -52,6 +52,8 @@ import { MatTreeModule } from '@angular/material/tree';
 import { questionsListReducer } from './components/list/data-access/store/questions-list.reducer';
 import { QuestionDialogComponent } from './components/question-dialog/question-dialog.component';
 import { TagColorPipe } from './shared/pipes/tag-color/tag-color.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -65,6 +67,7 @@ import { TagColorPipe } from './shared/pipes/tag-color/tag-color.pipe';
     HomeRoutingModule,
     StoreModule.forFeature('questionsList', questionsListReducer),
     EffectsModule.forFeature([QuestionsListEffects]),
+    ReactiveFormsModule,
     A11yModule,
     ClipboardModule,
     CdkStepperModule,
@@ -108,6 +111,8 @@ import { TagColorPipe } from './shared/pipes/tag-color/tag-color.pipe';
     MatTreeModule,
     PortalModule,
     ScrollingModule,
+    FormsModule,
+    MatFormFieldModule,
   ],
 })
 export class HomeModule {}

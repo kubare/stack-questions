@@ -1,30 +1,49 @@
-import { Component, Inject, OnInit, ViewChild } from '@angular/core';
+import { Component, Inject, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { QuestionsList } from '../list/models/questions-list.interface';
 import { MatExpansionPanel } from '@angular/material/expansion';
+import { Observable, Subject, takeUntil, tap } from 'rxjs';
 
 @Component({
   selector: 'app-question-dialog',
   templateUrl: './question-dialog.component.html',
   styleUrls: ['./question-dialog.component.scss'],
 })
-export class QuestionDialogComponent implements OnInit {
+export class QuestionDialogComponent implements OnInit, OnDestroy {
   @ViewChild(MatExpansionPanel) expansionPanel: MatExpansionPanel;
-  singleRandQuestion: QuestionsList | null =
-    this.data[Math.floor(Math.random() * this.data.length)];
+  singleRandQuestion: QuestionsList | null = null;
   panelOpenState = false;
   showSpinner = false;
+  destroy$ = new Subject();
 
   constructor(
     public dialogRef: MatDialogRef<QuestionDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: QuestionsList[]
+    @Inject(MAT_DIALOG_DATA) public data: Observable<QuestionsList[]>
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.data
+      .pipe(
+        tap((res) => {
+          if (res.length)
+            this.singleRandQuestion =
+              res[Math.floor(Math.random() * res.length)];
+        }),
+        takeUntil(this.destroy$)
+      )
+      .subscribe();
+  }
 
   getRandomQuestion() {
-    this.singleRandQuestion =
-      this.data[Math.floor(Math.random() * this.data.length)];
+    this.data
+      .pipe(
+        tap((res) => {
+          if (res.length)
+            this.singleRandQuestion =
+              res[Math.floor(Math.random() * res.length)];
+        })
+      )
+      .subscribe();
 
     this.showSpinner = true;
     setTimeout(() => {
@@ -36,5 +55,10 @@ export class QuestionDialogComponent implements OnInit {
 
   handleCancel(): void {
     this.dialogRef.close();
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next(true);
+    this.destroy$.complete();
   }
 }

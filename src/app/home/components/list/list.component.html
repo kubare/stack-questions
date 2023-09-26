@@ -1,7 +1,18 @@
 <div class="box">
   <div class="flex-box"></div>
   <div class="flex-box">
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Wyszukaj pytanie</mat-label>
+        <input
+          matInput
+          [formControl]="searchQuestionTitle"
+          placeholder="Nazwa pytania"
+        />
+      </mat-form-field>
+    </div>
     <div class="box__buttons">
+      <button mat-flat-button color="success">Dodaj pytanie</button>
       <button mat-flat-button color="primary" (click)="openDialog()">
         Losuj pytanie
       </button>

@@ -24,6 +24,11 @@
   &__chips {
     color: white;
   }
+
+  &__no-question {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .mat-expansion-panel-header-description {

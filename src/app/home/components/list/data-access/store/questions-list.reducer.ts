@@ -5,17 +5,20 @@ import {
   QuestionsListFail,
   QuestionsListLoad,
   QuestionsListSuccess,
+  QuestionsListQueryParams,
 } from './questions-list.actions';
 import { LoadingState } from 'src/app/home/shared/models/load-state.interface';
 
 export interface QuestionsListState {
   list: QuestionsList[];
+  filter: string;
   loadState: LoadingState;
   error: HttpErrorResponse | null;
 }
 
 export const initialState: QuestionsListState = {
   list: [],
+  filter: '',
   loadState: LoadingState.INIT,
   error: null,
 };
@@ -35,6 +38,15 @@ export const questionsListReducer = createReducer(
     (state, action): QuestionsListState => ({
       ...state,
       list: action.list,
+      loadState: LoadingState.SUCCESS,
+      error: null,
+    })
+  ),
+  on(
+    QuestionsListQueryParams,
+    (state, action): QuestionsListState => ({
+      ...state,
+      filter: action.filter,
       loadState: LoadingState.SUCCESS,
       error: null,
     })
