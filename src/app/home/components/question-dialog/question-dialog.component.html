@@ -6,9 +6,18 @@
         <mat-expansion-panel-header>
           <mat-panel-title> {{ singleRandQuestion!.title }} </mat-panel-title>
           <mat-panel-description>
-            <ng-container *ngFor="let tag of singleRandQuestion!.tags">
-              {{ tag }}
-            </ng-container>
+            <mat-chip-list
+              *ngFor="let tag of singleRandQuestion!.tags"
+              class="p-0.5"
+            >
+              <mat-chip
+                [ngStyle]="{
+                  'background-color': tag | tagColor
+                }"
+                class="box__chips"
+                >{{ tag }}</mat-chip
+              >
+            </mat-chip-list>
           </mat-panel-description>
         </mat-expansion-panel-header>
         <mat-dialog-content>

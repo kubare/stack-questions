@@ -5,7 +5,7 @@
       "title": "Na czym polega Accessbility w HTML?",
       "answer": "Polega na tym, żeby tworzyc strone internetową dostepną dla każdego. Każdy użytkownik mimo swoich ograniczen, ma mieć swobodny dostęp do stony. Aby poruszanie po stronie było przyjemne powinniśmy korzystać z sematycznego html.",
       "subpoints": null,
-      "tags": ["asd", "bds"],
+      "tags": ["html"],
       "image": null
     },
     {
@@ -13,7 +13,7 @@
       "title": "Co to jest Sematyczny HTML?",
       "answer": "Wykorzystywanie znaczników html w poprawny sposób. Jeżeli chcemy zaimplementować przycisk to nie robimy tego w <div> (non-semantic) tylko w znaczniku <button> (semantic). Używamy znacznikow <p> , <h1> itd. Aby ułatwić użytkownikowi poruszanie się po stronie. ",
       "subpoints": null,
-      "tags": ["asd", "bds"],
+      "tags": ["html"],
       "image": null
     },
     {
@@ -24,7 +24,7 @@
       "IDs - Example: #navbar",
       "Classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href]",
       "Elements and pseudo-elements - Example: h1, ::before "],
-      "tags": ["asd", "bds"],
+      "tags": ["css"],
       "image": "https://i.imgur.com/HzBcCzG.png"
     },
     {
@@ -32,7 +32,7 @@
       "title": "jsovn-server",
       "answer": "typffficode",
       "subpoints": null,
-      "tags": ["asd", "bds"],
+      "tags": ["javascript", "typescript"],
       "image": "https://i.imgur.com/6cdjFCR.png"
     },
     {
@@ -40,7 +40,7 @@
       "title": "jsondsf-server",
       "answer": "typisdfcode",
       "subpoints": null,
-      "tags": ["asd", "bds"],
+      "tags": ["angular", "rxjs"],
       "image": null
     }
   ]
