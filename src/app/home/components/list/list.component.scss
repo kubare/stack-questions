@@ -30,6 +30,12 @@ tr.example-element-row:not(.example-expanded-row):hover {
     margin-left: auto;
     margin-right: auto;
   }
+
+  &__tag {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+  }
 }
 
 .flex-box:nth-child(1) {
@@ -42,4 +48,8 @@ tr.example-element-row:not(.example-expanded-row):hover {
 
 .flex-box:nth-child(3) {
   width: 25%;
+}
+
+.mat-column-tags {
+  width: 10%;
 }

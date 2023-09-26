@@ -51,9 +51,15 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { questionsListReducer } from './components/list/data-access/store/questions-list.reducer';
 import { QuestionDialogComponent } from './components/question-dialog/question-dialog.component';
+import { TagColorPipe } from './shared/pipes/tag-color/tag-color.pipe';
 
 @NgModule({
-  declarations: [HomeComponent, ListComponent, QuestionDialogComponent],
+  declarations: [
+    HomeComponent,
+    ListComponent,
+    QuestionDialogComponent,
+    TagColorPipe,
+  ],
   imports: [
     CommonModule,
     HomeRoutingModule,

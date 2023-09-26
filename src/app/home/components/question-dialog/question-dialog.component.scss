@@ -20,4 +20,13 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  &__chips {
+    color: white;
+  }
+}
+
+.mat-expansion-panel-header-description {
+  display: flex;
+  justify-content: flex-end;
 }
