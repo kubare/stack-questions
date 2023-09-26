@@ -25,6 +25,11 @@ tr.example-element-row:not(.example-expanded-row):hover {
     padding-bottom: 8px;
   }
 
+  &__image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .flex-box:nth-child(1) {

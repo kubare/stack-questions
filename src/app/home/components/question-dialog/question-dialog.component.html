@@ -11,7 +11,17 @@
             </ng-container>
           </mat-panel-description>
         </mat-expansion-panel-header>
-        <p class="pt-5">{{ singleRandQuestion!.answer }}</p>
+        <mat-dialog-content>
+          <p class="pt-5">{{ singleRandQuestion!.answer }}</p>
+          <ul *ngFor="let subPoint of singleRandQuestion!.subpoints">
+            <li>{{ subPoint }}</li>
+          </ul>
+          <img
+            *ngIf="singleRandQuestion!.image"
+            class="box__image p-5"
+            src="{{ singleRandQuestion!.image }}"
+          />
+        </mat-dialog-content>
       </mat-expansion-panel>
     </mat-accordion>
   </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { QuestionsListLoad } from './data-access/store/questions-list.actions';
 import {
@@ -39,6 +39,10 @@ export class ListComponent {
   columnsValues = this.columnsToDisplay.map((a) => a.value);
   expandedElement: QuestionsList | null;
   destroy$ = new Subject();
+  maxWidth = 1000;
+  maxHeight = 1000;
+  screenWidth: number = window.innerWidth;
+  screenHeight: number = window.innerHeight;
 
   constructor(private store: Store, public dialog: MatDialog) {}
 
