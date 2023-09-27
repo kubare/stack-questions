@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { AsyncPipe, CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { ListComponent } from './components/list/list.component';
@@ -25,7 +25,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -52,6 +52,9 @@ import { MatTreeModule } from '@angular/material/tree';
 import { questionsListReducer } from './components/list/data-access/store/questions-list.reducer';
 import { QuestionDialogComponent } from './components/question-dialog/question-dialog.component';
 import { TagColorPipe } from './shared/pipes/tag-color/tag-color.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDialog } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -65,6 +68,7 @@ import { TagColorPipe } from './shared/pipes/tag-color/tag-color.pipe';
     HomeRoutingModule,
     StoreModule.forFeature('questionsList', questionsListReducer),
     EffectsModule.forFeature([QuestionsListEffects]),
+    ReactiveFormsModule,
     A11yModule,
     ClipboardModule,
     CdkStepperModule,
@@ -108,6 +112,14 @@ import { TagColorPipe } from './shared/pipes/tag-color/tag-color.pipe';
     MatTreeModule,
     PortalModule,
     ScrollingModule,
+    FormsModule,
+    MatFormFieldModule,
+  ],
+  providers: [
+    {
+      provide: MatDialogModule,
+      useValue: {},
+    },
   ],
 })
 export class HomeModule {}

@@ -1,39 +1,49 @@
 <div class="box">
   <h2>Wygenerowane pytanie</h2>
   <div *ngIf="!showSpinner; else spinner">
-    <mat-accordion>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title> {{ singleRandQuestion!.title }} </mat-panel-title>
-          <mat-panel-description>
-            <mat-chip-list
-              *ngFor="let tag of singleRandQuestion!.tags"
-              class="p-0.5"
-            >
-              <mat-chip
-                [ngStyle]="{
-                  'background-color': tag | tagColor
-                }"
-                class="box__chips"
-                >{{ tag }}</mat-chip
+    <ng-container *ngIf="data | async as questions">
+      <mat-accordion *ngIf="questions.length; else noQuestions">
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title class="xxx">
+              {{ singleRandQuestion!.title }}
+            </mat-panel-title>
+            <mat-panel-description>
+              <mat-chip-listbox
+                *ngFor="let tag of singleRandQuestion!.tags"
+                class="p-0.5"
               >
-            </mat-chip-list>
-          </mat-panel-description>
-        </mat-expansion-panel-header>
-        <mat-dialog-content>
-          <p class="pt-5">{{ singleRandQuestion!.answer }}</p>
-          <ul *ngFor="let subPoint of singleRandQuestion!.subpoints">
-            <li>{{ subPoint }}</li>
-          </ul>
-          <img
-            *ngIf="singleRandQuestion!.image"
-            class="box__image p-5"
-            src="{{ singleRandQuestion!.image }}"
-          />
-        </mat-dialog-content>
-      </mat-expansion-panel>
-    </mat-accordion>
+                <mat-chip
+                  [ngStyle]="{
+                    'background-color': tag | tagColor
+                  }"
+                  class="box__chips"
+                  >{{ tag }}</mat-chip
+                >
+              </mat-chip-listbox>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <mat-dialog-content>
+            <p class="pt-5">{{ singleRandQuestion!.answer }}</p>
+            <ul *ngFor="let subPoint of singleRandQuestion!.subpoints">
+              <li>{{ subPoint }}</li>
+            </ul>
+            <img
+              *ngIf="singleRandQuestion!.image"
+              class="box__image p-5"
+              src="{{ singleRandQuestion!.image }}"
+            />
+          </mat-dialog-content>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </ng-container>
   </div>
+
+  <ng-template #noQuestions>
+    <p class="box__no-question">
+      Wybierz zakres pytań do generowania losowego pytania.
+    </p>
+  </ng-template>
 
   <ng-template #spinner>
     <div class="box__spinner">
@@ -43,7 +53,12 @@
 
   <div class="box__buttons">
     <button mat-raised-button (click)="handleCancel()">Zamknij</button>
-    <button mat-flat-button color="primary" (click)="getRandomQuestion()">
+    <button
+      mat-flat-button
+      color="primary"
+      (click)="getRandomQuestion()"
+      [disabled]="singleRandQuestion === null"
+    >
       Losuj kolejne pytanie
     </button>
   </div>

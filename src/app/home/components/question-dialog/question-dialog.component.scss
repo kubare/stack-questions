@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
+  margin: 30px;
 
   &__buttons {
     display: flex;
@@ -22,11 +23,17 @@
   }
 
   &__chips {
-    color: white;
+      --mdc-chip-label-text-color: #fff;
+  }
+
+  &__no-question {
+    display: flex;
+    justify-content: center;
   }
 }
 
 .mat-expansion-panel-header-description {
   display: flex;
   justify-content: flex-end;
+  flex-grow: 0 !important;
 }

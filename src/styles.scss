@@ -1,4 +1,4 @@
-@use '@angular/material' as mat;
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,4 +8,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 ul {
   list-style: inside;
   margin-left: 20px;
+}
+
+.mdc-text-field--outlined:not(.mdc-text-field--disabled)
+.mdc-notched-outline
+.mdc-notched-outline__trailing {
+border-left-style: none;
+}
+.mdc-text-field--outlined:not(.mdc-text-field--disabled)
+.mdc-notched-outline
+.mdc-notched-outline__notch {
+border-right-style: none;
 }

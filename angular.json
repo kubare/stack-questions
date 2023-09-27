@@ -109,5 +109,7 @@
       }
     }
   },
-  "defaultProject": "stack-questions"
+  "cli": {
+    "analytics": false
+  }
 }
