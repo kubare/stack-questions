@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import {
   QuestionsListLoad,
@@ -11,16 +11,14 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
-import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { QuestionsList } from './models/questions-list.interface';
-import { Observable, Subject, map, startWith, takeUntil, tap } from 'rxjs';
+import { Observable, Subject, takeUntil, tap } from 'rxjs';
 import { selectQuestions } from './data-access/store/questions-list.selectors';
-import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
 import { QuestionDialogComponent } from '../question-dialog/question-dialog.component';
 import { UntypedFormControl } from '@angular/forms';
-import { LiveAnnouncer } from '@angular/cdk/a11y';
-import { MatLegacyAutocompleteSelectedEvent as MatAutocompleteSelectedEvent } from '@angular/material/legacy-autocomplete';
-import { MatLegacyChipInputEvent as MatChipInputEvent } from '@angular/material/legacy-chips';
+import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
+import { MatChipInputEvent } from '@angular/material/chips';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-list',
@@ -46,17 +44,20 @@ export class ListComponent {
   ];
   columnsValues = this.columnsToDisplay.map((a) => a.value);
   expandedElement: QuestionsList | null;
-  searchQuestionTitle = new UntypedFormControl('');
+  filterQuestionTitle = new UntypedFormControl('');
+  filterQuestionTags = new UntypedFormControl('');
+  selectedTags: string[] = [];
+  allTags: string[] = [
+    'html',
+    'css',
+    'javascript',
+    'typescript',
+    'angular',
+    'rxjs',
+    'ngrx',
+    'patterns',
+  ];
   destroy$ = new Subject();
-  separatorKeysCodes: number[] = [ENTER, COMMA];
-  fruitCtrl = new UntypedFormControl('');
-  filteredFruits: Observable<string[]>;
-  fruits: string[] = ['Lemon'];
-  allFruits: string[] = ['Apple', 'Lemon', 'Lime', 'Orange', 'Strawberry'];
-
-  @ViewChild('fruitInput') fruitInput: ElementRef<HTMLInputElement>;
-
-  announcer = inject(LiveAnnouncer);
 
   constructor(private store: Store, public dialog: MatDialog) {}
 
@@ -65,21 +66,30 @@ export class ListComponent {
     this.questionsList$ = this.store.select(selectQuestions);
     this.addQuestionsToTable();
 
-    this.searchQuestionTitle.valueChanges
+    this.filterQuestionTitle.valueChanges
       .pipe(
         tap((res) => {
-          this.store.dispatch(QuestionsListQueryParams({ filter: res }));
+          this.store.dispatch(
+            QuestionsListQueryParams({ title: res, tags: [] })
+          );
+          if (res) this.filterQuestionTags.disable();
+          else this.filterQuestionTags.enable();
         }),
         takeUntil(this.destroy$)
       )
       .subscribe();
 
-    this.filteredFruits = this.fruitCtrl.valueChanges.pipe(
-      startWith(null),
-      map((fruit: string | null) =>
-        fruit ? this._filter(fruit) : this.allFruits.slice()
+    this.filterQuestionTags.valueChanges
+      .pipe(
+        tap((res) => {
+          const index = this.allTags.indexOf(res);
+          if (index !== -1) {
+            this.allTags.splice(index, 1);
+          }
+        }),
+        takeUntil(this.destroy$)
       )
-    );
+      .subscribe();
   }
 
   openDialog(): void {
@@ -97,40 +107,33 @@ export class ListComponent {
 
   add(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
-
-    // Add our fruit
     if (value) {
-      this.fruits.push(value);
+      this.selectedTags.push(value);
     }
-
-    // Clear the input value
     event.chipInput!.clear();
 
-    this.fruitCtrl.setValue(null);
+    this.filterQuestionTags.setValue(null);
   }
 
   remove(fruit: string): void {
-    const index = this.fruits.indexOf(fruit);
+    const index = this.selectedTags.indexOf(fruit);
 
     if (index >= 0) {
-      this.fruits.splice(index, 1);
-
-      this.announcer.announce(`Removed ${fruit}`);
+      this.selectedTags.splice(index, 1);
     }
+    this.store.dispatch(
+      QuestionsListQueryParams({ title: '', tags: [...this.selectedTags] })
+    );
+
+    this.allTags.unshift(fruit);
   }
 
   selected(event: MatAutocompleteSelectedEvent): void {
-    this.fruits.push(event.option.viewValue);
-    this.fruitInput.nativeElement.value = '';
-    this.fruitCtrl.setValue(null);
-  }
-
-  private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
-
-    return this.allFruits.filter((fruit) =>
-      fruit.toLowerCase().includes(filterValue)
+    this.selectedTags.push(event.option.viewValue);
+    this.store.dispatch(
+      QuestionsListQueryParams({ title: '', tags: [...this.selectedTags] })
     );
+    this.filterQuestionTags.setValue(null);
   }
 
   ngOnDestroy() {

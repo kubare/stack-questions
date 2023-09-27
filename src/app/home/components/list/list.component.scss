@@ -10,7 +10,7 @@ tr.example-element-row:not(.example-expanded-row):hover {
   border-bottom-width: 0;
 }
 
-.mat-table{
+.mat-mdc-table{
   border-radius: 6px;
   overflow: hidden !important;
 }
@@ -22,7 +22,8 @@ tr.example-element-row:not(.example-expanded-row):hover {
   &__buttons{
     display: flex;
     justify-content: flex-end;
-    padding-bottom: 8px;
+    align-items: flex-end;
+    padding-bottom: 22px;
     gap: 8px;
   }
 
@@ -36,6 +37,23 @@ tr.example-element-row:not(.example-expanded-row):hover {
     display: flex;
     flex-direction: row;
     gap: 6px;
+  }
+
+  &__chip {
+    --mdc-chip-label-text-color: #fff;
+  }
+
+  &__filters {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
   }
 }
 
@@ -55,7 +73,3 @@ tr.example-element-row:not(.example-expanded-row):hover {
   width: 10%;
 }
 
-.mat-success {
-  background-color: green;
-  color: #fff;
-}

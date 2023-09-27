@@ -5,9 +5,11 @@
       <mat-accordion *ngIf="questions.length; else noQuestions">
         <mat-expansion-panel>
           <mat-expansion-panel-header>
-            <mat-panel-title> {{ singleRandQuestion!.title }} </mat-panel-title>
+            <mat-panel-title class="xxx">
+              {{ singleRandQuestion!.title }}
+            </mat-panel-title>
             <mat-panel-description>
-              <!-- <mat-chip-list
+              <mat-chip-listbox
                 *ngFor="let tag of singleRandQuestion!.tags"
                 class="p-0.5"
               >
@@ -18,7 +20,7 @@
                   class="box__chips"
                   >{{ tag }}</mat-chip
                 >
-              </mat-chip-list> -->
+              </mat-chip-listbox>
             </mat-panel-description>
           </mat-expansion-panel-header>
           <mat-dialog-content>

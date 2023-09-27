@@ -1,42 +1,59 @@
-<!-- <div class="box">
+<div class="box">
   <div class="flex-box"></div>
   <div class="flex-box">
-    <div>
-      <mat-form-field appearance="outline">
-        <mat-label>Wyszukaj pytanie</mat-label>
-        <input
-          matInput
-          [formControl]="searchQuestionTitle"
-          placeholder="Nazwa pytania"
-        />
-      </mat-form-field>
+    <div class="box__header">
+      <div class="box__filters">
+        <h3>Filtruj pytania</h3>
+        <mat-form-field appearance="outline">
+          <mat-label>Szukaj pytania po nazwie</mat-label>
+          <input
+            matInput
+            placeholder="Nazwa pytania"
+            [formControl]="filterQuestionTitle"
+            [readonly]="selectedTags.length ? true : false"
+          />
+          <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
 
-      <mat-form-field class="example-chip-list" appearance="outline">
-        <mat-label>Favorite Fruits</mat-label>
-        <mat-chip-grid #chipGrid aria-label="Fruit selection">
-          <mat-chip-row *ngFor="let fruit of fruits" (removed)="remove(fruit)">
-            {{fruit}}
-            <button matChipRemove [attr.aria-label]="'remove ' + fruit">
-              <mat-icon>cancel</mat-icon>
-            </button>
-          </mat-chip-row>
-        </mat-chip-grid>
-        <input placeholder="New Fruit..." #fruitInput [formControl]="fruitCtrl"
-          [matChipInputFor]="chipGrid" [matAutocomplete]="auto"
-          [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-          (matChipInputTokenEnd)="add($event)"/>
-        <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
-          <mat-option *ngFor="let fruit of filteredFruits | async" [value]="fruit">
-            {{fruit}}
-          </mat-option>
-        </mat-autocomplete>
-      </mat-form-field>
-    </div>
-    <div class="box__buttons">
-      <button mat-flat-button color="success">Dodaj pytanie</button>
-      <button mat-flat-button color="primary" (click)="openDialog()">
-        Losuj pytanie
-      </button>
+        <mat-form-field appearance="outline">
+          <mat-label>Szukaj pytań po tagach</mat-label>
+          <mat-chip-grid #chipGrid>
+            <mat-chip-row
+              class="box__chip"
+              *ngFor="let tag of selectedTags"
+              (removed)="remove(tag)"
+              [ngStyle]="{
+                'background-color': tag | tagColor
+              }"
+            >
+              {{ tag }}
+              <button matChipRemove [attr.aria-label]="'remove ' + tag">
+                <mat-icon>cancel</mat-icon>
+              </button>
+            </mat-chip-row>
+          </mat-chip-grid>
+          <input
+            placeholder="Wybierz tag"
+            [formControl]="filterQuestionTags"
+            [matChipInputFor]="chipGrid"
+            [matAutocomplete]="auto"
+            (matChipInputTokenEnd)="add($event)"
+          />
+          <mat-autocomplete
+            #auto="matAutocomplete"
+            (optionSelected)="selected($event)"
+          >
+            <mat-option *ngFor="let tag of allTags" [value]="tag">
+              {{ tag }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </div>
+      <div class="box__buttons">
+        <button mat-flat-button color="primary" (click)="openDialog()">
+          Losuj pytanie
+        </button>
+      </div>
     </div>
     <table
       mat-table
@@ -55,15 +72,15 @@
           </ng-container>
           <ng-template #tag>
             <div class="box__tag">
-              <mat-chip-list *ngFor="let tag of element.tags">
+              <mat-chip-listbox *ngFor="let tag of element.tags">
                 <mat-chip
+                  class="box__chip"
                   [ngStyle]="{
-                    'background-color': tag | tagColor,
-                    color: 'white'
+                    'background-color': tag | tagColor
                   }"
                   >{{ tag }}</mat-chip
                 >
-              </mat-chip-list>
+              </mat-chip-listbox>
             </div>
           </ng-template>
         </td>
@@ -111,4 +128,4 @@
     </table>
   </div>
   <div class="flex-box"></div>
-</div> -->
+</div>

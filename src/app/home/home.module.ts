@@ -25,7 +25,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -54,6 +54,7 @@ import { QuestionDialogComponent } from './components/question-dialog/question-d
 import { TagColorPipe } from './shared/pipes/tag-color/tag-color.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDialog } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -113,6 +114,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     ScrollingModule,
     FormsModule,
     MatFormFieldModule,
+  ],
+  providers: [
+    {
+      provide: MatDialogModule,
+      useValue: {},
+    },
   ],
 })
 export class HomeModule {}

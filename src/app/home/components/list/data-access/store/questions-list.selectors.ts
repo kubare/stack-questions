@@ -13,7 +13,7 @@ export const selectQuestionsListState =
 
 export const selectQueryParams = createSelector(
   selectQuestionsListState,
-  (state: QuestionsListState) => state.filter
+  (state: QuestionsListState) => state.params
 );
 
 export const selectQuestions = createSelector(

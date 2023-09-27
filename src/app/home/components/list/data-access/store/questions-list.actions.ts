@@ -18,7 +18,7 @@ export const QuestionsListSuccess = createAction(
 
 export const QuestionsListQueryParams = createAction(
   questionsList.requestQueryParams,
-  props<{ filter: string }>()
+  props<{ title: string; tags: string[] }>()
 );
 
 export const QuestionsListFail = createAction(

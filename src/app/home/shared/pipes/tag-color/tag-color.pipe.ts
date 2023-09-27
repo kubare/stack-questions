@@ -5,7 +5,7 @@ import { Tags } from '../../enums/tags.enum';
   name: 'tagColor',
 })
 export class TagColorPipe implements PipeTransform {
-  transform(value: Tags) {
+  transform(value: any) {
     const shortcutMap = new Map([
       [Tags.HTML, '#f76a05'],
       [Tags.CSS, '#0531f5'],
