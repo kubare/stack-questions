@@ -55,6 +55,7 @@ import { TagColorPipe } from './shared/pipes/tag-color/tag-color.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialog } from '@angular/material/dialog';
+import { QuestionFormComponent } from './components/question-form/question-form.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { MatDialog } from '@angular/material/dialog';
     ListComponent,
     QuestionDialogComponent,
     TagColorPipe,
+    QuestionFormComponent,
   ],
   imports: [
     CommonModule,
