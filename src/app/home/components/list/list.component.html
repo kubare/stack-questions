@@ -98,10 +98,15 @@
               element == expandedElement ? 'expanded' : 'collapsed'
             "
           >
-            <div class="p-3">{{ element.answer }}</div>
-            <ul *ngFor="let subPoint of element.subpoints">
-              <li>{{ subPoint }}</li>
-            </ul>
+            <div class="pt-3 pr-3 pl-3 pb-1">{{ element.answer }}</div>
+            <div
+              [ngStyle]="element.image ? null : { 'padding-bottom': '20px' }"
+            >
+              <ul *ngFor="let subPoint of element.subpoints">
+                <li>{{ subPoint }}</li>
+              </ul>
+            </div>
+
             <img
               *ngIf="element.image"
               class="box__image p-5"

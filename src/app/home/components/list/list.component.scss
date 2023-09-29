@@ -18,6 +18,7 @@ tr.example-element-row:not(.example-expanded-row):hover {
 .box {
   display: flex;
   padding-top: 100px;
+  padding-bottom: 100px;
 
   &__buttons{
     display: flex;
@@ -72,4 +73,3 @@ tr.example-element-row:not(.example-expanded-row):hover {
 .mat-column-tags {
   width: 10%;
 }
-
