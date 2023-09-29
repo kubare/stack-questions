@@ -5,7 +5,7 @@
       <mat-accordion *ngIf="questions.length; else noQuestions">
         <mat-expansion-panel>
           <mat-expansion-panel-header>
-            <mat-panel-title class="xxx">
+            <mat-panel-title>
               {{ singleRandQuestion!.title }}
             </mat-panel-title>
             <mat-panel-description>
@@ -24,10 +24,17 @@
             </mat-panel-description>
           </mat-expansion-panel-header>
           <mat-dialog-content>
-            <p class="pt-5">{{ singleRandQuestion!.answer }}</p>
-            <ul *ngFor="let subPoint of singleRandQuestion!.subpoints">
-              <li>{{ subPoint }}</li>
-            </ul>
+            <p class="pt-3 pr-3 pl-3">{{ singleRandQuestion!.answer }}</p>
+            <div
+              [ngStyle]="
+                singleRandQuestion!.image ? { 'padding-bottom': '9px' } : null
+              "
+            >
+              <ul *ngFor="let subPoint of singleRandQuestion!.subpoints">
+                <li>{{ subPoint }}</li>
+              </ul>
+            </div>
+
             <img
               *ngIf="singleRandQuestion!.image"
               class="box__image p-5"

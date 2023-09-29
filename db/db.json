@@ -29,18 +29,74 @@
     },
     {
       "id": 4,
-      "title": "jsovn-server",
-      "answer": "typffficode",
+      "title": "Na czym polega typ generyczny?",
+      "answer": "Typ generyczny polega na tym, że może przyjąć rózne typy danych. Generykiem możemy otypowac funkcje, interfejs, klase. Pozwala nam to zachować dużą elastycznosc i implementować funckje/interfejsy/klasy wielokrotnego uzytku.",
       "subpoints": null,
-      "tags": ["javascript", "typescript"],
+      "tags": ["typescript"],
       "image": "https://i.imgur.com/6cdjFCR.png"
     },
     {
       "id": 5,
-      "title": "jsondsf-server",
-      "answer": "typisdfcode",
+      "title": "Czym jest strict mode i jak go uzyć?",
+      "answer": "Strict mode polega na bardziej rygorystycznym sprawdzaniu kodu przez JavaScript. Możemy to odpalic przez uzycie dyrektywy ‘use strict’ na poczatku pliku lub w funkcji ktorej ma rygorystyczniej sprawdzac kod.",
       "subpoints": null,
-      "tags": ["angular", "rxjs"],
+      "tags": ["javascript"],
+      "image": null
+    },
+    {
+      "id": 6,
+      "title": "W jaki sposób obsługujemy wyjątki?",
+      "answer": "Przez uzycie metody try/catch. W try wywolujemy funkcję, jeśli ona zgłosi wyjątek wywoła go w catch.",
+      "subpoints": null,
+      "tags": ["javascript"],
+      "image": null
+    },
+    {
+      "id": 7,
+      "title": "Co to jest Cascade (kaskadowość)?",
+      "answer": "Rozstrzyga konfilkty w jakiej kolejności wyświetlamy style przypisane do znaczników. Jeżeli jeden znacznik ma przypisane dwa różne style to wybierze ten, który został jako ostatni napisany. Wedlug ponizszego przykladu h1 będzie koloru niebieskiego ponieważ wartość color: blue została napisana jako ostatnia w pliku css.",
+      "subpoints": null,
+      "tags": ["css"],
+      "image": "https://i.imgur.com/BG1aU3x.png"
+    },
+    {
+      "id": 8,
+      "title": "Czym są Local Storage, Session Storage oraz cookies?",
+      "answer": "",
+      "subpoints": ["Te trzy mechanizmy pozwalają na przechowywanie niewielkich porcji danych w przeglądarce w celu ich późniejszego użycia. Do takich danych można zaliczyć wszelkiego rodzaju identyfikatory, tokeny, konfiguracje itp.", "Podstawową różnicą między Local Storage, Session Storage a cookies jest to, że cookies możemy odczytać z poziomu serwera. Zawartość Local Storage i Session Storage można odczytać tylko z poziomu przeglądarki.", "Kolejną różnicą jest to, że cookies mają ograniczony czas życia. Można ustawić, aby czas życia ciasteczka wynosił np. 1 dzień lub 1 godzinę. Inaczej sprawa wygląda przy Local Storage i Session Storage. W przypadku pierwszego z nich, dane można usunąć poprzez wykorzystanie Web Storage API lub wyczyszczenie danych ręcznie. Session Storage traci dane po zakończeniu sesji strony."],
+      "tags": ["javascript"],
+      "image": null
+    },
+    {
+      "id": 9,
+      "title": "Interface vs Type?",
+      "answer": "Oba te zagadnienia służą do implementacji struktur typow. Interface sluzy glownie do typowania danej struktury obiektu (proste obiekty) a zagadnienie type pozwala otypowac bardziej zaawansowane struktury z uzyciem np. Utility Types. Oprócz tego type możemy latwiej rozszerzac (bardziej elastycznie).",
+      "subpoints": null,
+      "tags": ["typescript"],
+      "image": null
+    },
+    {
+      "id": 10,
+      "title": "Co to jest type guards?",
+      "answer": "Sluża do sprawdzania typu zmiennej. Dzieki temu mamy wiekszą pewność podczas typowania. Glownie type guardy sluza to generykow, unii czy ogólnie do typow niestandardowych. Domyslnie w TS mamy narzedzie typeof i instanceof ale możemy robic wlasne uniwersalne type guardy. ",
+      "subpoints": ["Typeof – sprawdza jakiego typu jest dana zmienna", "Instanceof – sprawdza czy dany obiekt jest instacja danej klasy"],
+      "tags": ["typescript"],
+      "image": null
+    },
+    {
+      "id": 10,
+      "title": "Reactive Forms vs Template Driven Forms",
+      "answer": "",
+      "subpoints": ["Reactive form to sposób implmentacji formularzy, przez uzycie obiektow FormGroup, FormArray, FormControl. Reactive formsy są bardzo elastyczne, mamy pełną kontrole nad formularzami. Są używane zawzwyczaj do bardziej złozonych formularzy. Implementacja odbywa się w templatce HTML oraz componencie.", "Template Driven Forms możemy implemtnować przez użycie dyrektyw ngModel, ngSubmit, ngForm. TDF implementujemy od razu w templatce HTML. Mamy mniej kontroli nad takim formularzem. Walidacja tez jest bardziej skrojona, dla RF jest bardziej szczegolowa."],
+      "tags": ["angular"],
+      "image": null
+    },
+    {
+      "id": 11,
+      "title": "Promisy co to jest?",
+      "answer": "Jest to obiekt, ktory ma dostepna wartość, czeka na nią lub nigdy jej nie dostanie. Promisy wykonują się asynchornicznie i są uzywane na przykład do zapytan api. Przy promisach uzywamy funkcji zwrotnej .then() która nam zwraca poprawny rezultat jak i negatywny rezultat. Do obslugi bledow możemy uzyc funkcji .catch()",
+      "subpoints": null,
+      "tags": ["javascript"],
       "image": null
     }
   ]
