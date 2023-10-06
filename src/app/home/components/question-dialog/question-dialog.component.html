@@ -9,16 +9,13 @@
               {{ singleRandQuestion!.title }}
             </mat-panel-title>
             <mat-panel-description>
-              <mat-chip-listbox
-                *ngFor="let tag of singleRandQuestion!.tags"
-                class="p-0.5"
-              >
+              <mat-chip-listbox class="p-0.5">
                 <mat-chip
                   [ngStyle]="{
-                    'background-color': tag | tagColor
+                    'background-color': singleRandQuestion?.tags | tagColor
                   }"
                   class="box__chips"
-                  >{{ tag }}</mat-chip
+                  >{{ singleRandQuestion?.tags }}</mat-chip
                 >
               </mat-chip-listbox>
             </mat-panel-description>

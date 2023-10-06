@@ -1,0 +1,42 @@
+
+.form {
+  &__header {
+    border-bottom: 1px solid grey;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__header-info {
+    margin-top: 25px;
+    margin-left: 25px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+  }
+
+  &__sub-points {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__chip {
+    --mdc-chip-label-text-color: #fff;
+  }
+
+  &__sub-header {
+    border-bottom: 1px solid grey;
+  }
+
+  &__add {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.mat-mdc-form-field {
+  display: flex;
+}
+
