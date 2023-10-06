@@ -19,6 +19,8 @@ import { UntypedFormControl } from '@angular/forms';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { MatDialog } from '@angular/material/dialog';
+import { QuestionFormComponent } from '../question-form/question-form.component';
+import { allTags } from '../../shared/models/tags.constant';
 
 @Component({
   selector: 'app-list',
@@ -47,16 +49,7 @@ export class ListComponent {
   filterQuestionTitle = new UntypedFormControl('');
   filterQuestionTags = new UntypedFormControl('');
   selectedTags: string[] = [];
-  allTags: string[] = [
-    'html',
-    'css',
-    'javascript',
-    'typescript',
-    'angular',
-    'rxjs',
-    'ngrx',
-    'patterns',
-  ];
+  allTags = allTags;
   destroy$ = new Subject();
 
   constructor(private store: Store, public dialog: MatDialog) {}
@@ -92,11 +85,26 @@ export class ListComponent {
       .subscribe();
   }
 
-  openDialog(): void {
+  openDialogRandomQuestion(): void {
     this.dialog.open(QuestionDialogComponent, {
       data: this.questionsList$,
       width: '900px',
     });
+  }
+
+  openDialogFormQuestion(): void {
+    const dialogRef = this.dialog.open(QuestionFormComponent, {
+      width: '900px',
+    });
+
+    dialogRef
+      .afterClosed()
+      .pipe(
+        tap(() => {
+          this.store.dispatch(QuestionsListLoad());
+        })
+      )
+      .subscribe();
   }
 
   addQuestionsToTable(): void {

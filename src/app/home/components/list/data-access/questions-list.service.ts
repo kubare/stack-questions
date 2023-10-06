@@ -27,4 +27,11 @@ export class QuestionsListService {
       `http://localhost:3000/questions${queryString}`
     );
   }
+
+  add(question?: QuestionsList): Observable<QuestionsList> {
+    return this.http.post<QuestionsList>(
+      'http://localhost:3000/questions',
+      question
+    );
+  }
 }

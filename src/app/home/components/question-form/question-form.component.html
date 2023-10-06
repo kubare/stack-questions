@@ -1,1 +1,100 @@
-<p>question-form works!</p>
+<div class="form">
+  <div class="form__header">
+    <div class="form__header-info">
+      <h3>DODAJ PYTANIE</h3>
+    </div>
+    <button mat-icon-button (click)="closeDialog()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <form [formGroup]="questionForm" class="form__body">
+    <div class="form__sub-header">
+      <h5>NAZWA PYTANIA I GŁÓWNA ODPOWIEDŹ</h5>
+    </div>
+    <br />
+    <mat-form-field appearance="outline">
+      <mat-label>Nazwa pytania</mat-label>
+      <input matInput placeholder="Pytanie" formControlName="title" />
+      <mat-error *ngIf="questionForm.controls.title.invalid" class="form_error"
+        >Nazwa wymagana</mat-error
+      >
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Odpowiedź</mat-label>
+      <textarea
+        matInput
+        placeholder="Odpowiedź"
+        formControlName="answer"
+      ></textarea>
+      <mat-error *ngIf="questionForm.controls.answer.invalid" class="form_error"
+        >Odpowiedź wymagana</mat-error
+      >
+    </mat-form-field>
+    <div class="form__sub-header">
+      <h5>PODPUNKTY DO ODPOWIEDZI</h5>
+    </div>
+    <br />
+    <ng-container formArrayName="subpoints">
+      <div
+        *ngFor="
+          let subPoint of subpoints.controls;
+          let i = index;
+          let first = first;
+          let last = last
+        "
+      >
+        <mat-form-field
+          appearance="outline"
+          [ngStyle]="{ 'margin-bottom': last ? '-1.25em' : null }"
+        >
+          <mat-label>Podpunkt</mat-label>
+          <input matInput [formControlName]="i" />
+          <mat-icon *ngIf="!first" matSuffix (click)="removeSubPoint(i)"
+            >remove</mat-icon
+          >
+        </mat-form-field>
+        <div *ngIf="last" class="form__add">
+          <button mat-icon-button (click)="addSubPoint()">
+            <mat-icon>add</mat-icon>
+          </button>
+        </div>
+      </div>
+    </ng-container>
+
+    <div class="form__sub-header">
+      <h5>TAGI I ZDJĘCIE POMOCNICZE</h5>
+    </div>
+    <br />
+    <mat-form-field appearance="outline">
+      <mat-label>Tag</mat-label>
+      <mat-select formControlName="tags">
+        <mat-option *ngFor="let tag of allTags" [value]="tag">
+          <mat-chip
+            class="form__chip"
+            [ngStyle]="{
+              'background-color': tag | tagColor
+            }"
+            >{{ tag }}</mat-chip
+          >
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="questionForm.controls.tags.invalid" class="form_error"
+        >Tag wymagany</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Zdjęcie pomocnicze</mat-label>
+      <input matInput placeholder="Link do screena" formControlName="image" />
+    </mat-form-field>
+
+    <button
+      mat-flat-button
+      color="primary"
+      [disabled]="questionForm.invalid"
+      (click)="submitForm()"
+    >
+      Dodaj pytanie
+    </button>
+  </form>
+</div>

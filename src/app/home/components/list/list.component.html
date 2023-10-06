@@ -50,7 +50,19 @@
         </mat-form-field>
       </div>
       <div class="box__buttons">
-        <button mat-flat-button color="primary" (click)="openDialog()">
+        <button
+          mat-stroked-button
+          color="accent"
+          (click)="openDialogFormQuestion()"
+        >
+          Dodaj pytanie
+        </button>
+
+        <button
+          mat-stroked-button
+          color="primary"
+          (click)="openDialogRandomQuestion()"
+        >
           Losuj pytanie
         </button>
       </div>
@@ -72,13 +84,13 @@
           </ng-container>
           <ng-template #tag>
             <div class="box__tag">
-              <mat-chip-listbox *ngFor="let tag of element.tags">
+              <mat-chip-listbox>
                 <mat-chip
                   class="box__chip"
                   [ngStyle]="{
-                    'background-color': tag | tagColor
+                    'background-color': element.tags | tagColor
                   }"
-                  >{{ tag }}</mat-chip
+                  >{{ element.tags }}</mat-chip
                 >
               </mat-chip-listbox>
             </div>
@@ -103,7 +115,7 @@
               [ngStyle]="element.image ? null : { 'padding-bottom': '20px' }"
             >
               <ul *ngFor="let subPoint of element.subpoints">
-                <li>{{ subPoint }}</li>
+                <li *ngIf="subPoint">{{ subPoint }}</li>
               </ul>
             </div>
 

@@ -5,6 +5,6 @@ export interface QuestionsList {
   title: string;
   answer: string;
   subpoints: string[] | null;
-  tags: Tags[];
+  tags: Tags;
   image: string | null;
 }
