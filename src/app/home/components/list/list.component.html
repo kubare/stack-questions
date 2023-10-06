@@ -95,6 +95,19 @@
               </mat-chip-listbox>
             </div>
           </ng-template>
+          <div *ngIf="column.value === 'actions'" class="box__actions">
+            <button
+              mat-icon-button
+              [matMenuTriggerFor]="menu"
+              (click)="stopPropagation($event)"
+            >
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>Edytuj</button>
+              <button mat-menu-item>Usuń</button>
+            </mat-menu>
+          </div>
         </td>
       </ng-container>
 
