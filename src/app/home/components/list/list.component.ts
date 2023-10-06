@@ -43,6 +43,7 @@ export class ListComponent {
   columnsToDisplay = [
     { label: 'Nazwa pytania', value: 'title' },
     { label: 'Tagi', value: 'tags' },
+    { label: '', value: 'actions' },
   ];
   columnsValues = this.columnsToDisplay.map((a) => a.value);
   expandedElement: QuestionsList | null;
@@ -142,6 +143,10 @@ export class ListComponent {
       QuestionsListQueryParams({ title: '', tags: [...this.selectedTags] })
     );
     this.filterQuestionTags.setValue(null);
+  }
+
+  stopPropagation(e: Event) {
+    e.stopPropagation();
   }
 
   ngOnDestroy() {

@@ -54,7 +54,11 @@ tr.example-element-row:not(.example-expanded-row):hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
 
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
   }
 }
 
@@ -72,4 +76,8 @@ tr.example-element-row:not(.example-expanded-row):hover {
 
 .mat-column-tags {
   width: 10%;
+}
+
+.mat-column-actions {
+  width: 5%;
 }
