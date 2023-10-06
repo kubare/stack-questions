@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { QuestionAddRequest } from './data-access/question-add.actions';
 import { FormArray, FormBuilder, Validators } from '@angular/forms';
@@ -55,7 +55,7 @@ export class QuestionFormComponent {
       id: uuid(),
     };
 
-    this.store.dispatch(QuestionAddRequest({ payload: payload }));
+    this.store.dispatch(QuestionAddRequest({ payload }));
 
     this.dialogRef.close();
     this.snackBar.open('Dodano pytanie!');

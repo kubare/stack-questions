@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Actions, concatLatestFrom, createEffect, ofType } from '@ngrx/effects';
-import { catchError, map, mergeMap, of, switchMap, tap } from 'rxjs';
-import { Store } from '@ngrx/store';
+import { Actions, createEffect, ofType } from '@ngrx/effects';
+import { catchError, map, of, switchMap } from 'rxjs';
 import { QuestionsListService } from '../../list/data-access/questions-list.service';
 import {
   QuestionAddFail,
@@ -25,7 +24,6 @@ export class QuestionAddEffects {
 
   constructor(
     private actions$: Actions,
-    private service: QuestionsListService,
-    private store: Store
+    private service: QuestionsListService
   ) {}
 }
