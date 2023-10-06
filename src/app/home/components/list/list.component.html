@@ -105,7 +105,9 @@
             </button>
             <mat-menu #menu="matMenu">
               <button mat-menu-item>Edytuj</button>
-              <button mat-menu-item>Usuń</button>
+              <button mat-menu-item (click)="deleteQuestion(element)">
+                Usuń
+              </button>
             </mat-menu>
           </div>
         </td>

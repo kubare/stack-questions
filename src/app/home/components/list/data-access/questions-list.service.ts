@@ -34,4 +34,10 @@ export class QuestionsListService {
       question
     );
   }
+
+  delete(id: string): Observable<QuestionsList> {
+    return this.http.delete<QuestionsList>(
+      `http://localhost:3000/questions/${id}`
+    );
+  }
 }

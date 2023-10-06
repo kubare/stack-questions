@@ -1,0 +1,10 @@
+<div>
+  <h3>USUN PYTANIE</h3>
+  <p>Czy chcesz usunąc pytanie {{ data.title }}</p>
+
+  <button mat-flat-button (click)="closeDialog()">Anuluj</button>
+
+  <button mat-flat-button color="warn" (click)="deleteQuestion(data.id)">
+    Usuń
+  </button>
+</div>

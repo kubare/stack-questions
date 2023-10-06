@@ -57,6 +57,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialog } from '@angular/material/dialog';
 import { QuestionFormComponent } from './components/question-form/question-form.component';
 import { QuestionAddEffects } from './components/question-form/data-access/question-add.effects';
+import { QuestionRemoveComponent } from './components/question-remove/question-remove.component';
+import { QuestionRemoveEffects } from './components/question-remove/data-access/question-remove.effects';
 
 @NgModule({
   declarations: [
@@ -65,12 +67,17 @@ import { QuestionAddEffects } from './components/question-form/data-access/quest
     QuestionDialogComponent,
     TagColorPipe,
     QuestionFormComponent,
+    QuestionRemoveComponent,
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
     StoreModule.forFeature('questionsList', questionsListReducer),
-    EffectsModule.forFeature([QuestionsListEffects, QuestionAddEffects]),
+    EffectsModule.forFeature([
+      QuestionsListEffects,
+      QuestionAddEffects,
+      QuestionRemoveEffects,
+    ]),
     ReactiveFormsModule,
     A11yModule,
     ClipboardModule,
