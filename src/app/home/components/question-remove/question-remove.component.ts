@@ -4,6 +4,7 @@ import { QuestionsList } from '../list/models/questions-list.interface';
 import { QuestionsListLoad } from '../list/data-access/store/questions-list.actions';
 import { Store } from '@ngrx/store';
 import { QuestionRemoveRequest } from './data-access/question-remove.actions';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-question-remove',
@@ -14,12 +15,14 @@ export class QuestionRemoveComponent {
   constructor(
     public dialogRef: MatDialogRef<QuestionRemoveComponent>,
     @Inject(MAT_DIALOG_DATA) public data: QuestionsList,
-    private store: Store
+    private store: Store,
+    private snackBar: MatSnackBar
   ) {}
 
   deleteQuestion(id: string) {
     this.store.dispatch(QuestionRemoveRequest({ id }));
     this.dialogRef.close();
+    this.snackBar.open('Usunięto pytanie!', 'Ok');
     this.store.dispatch(QuestionsListLoad());
   }
 

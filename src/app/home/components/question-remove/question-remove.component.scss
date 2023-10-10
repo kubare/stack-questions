@@ -1,0 +1,22 @@
+
+.remove {
+  &__header {
+    border-bottom: 1px solid #D3D3D3;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__body {
+    margin-top: 25px;
+    margin-left: 25px;
+  }
+
+  &__buttons {
+    margin: 25px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+}
+
+
