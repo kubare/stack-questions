@@ -58,7 +58,7 @@ export class QuestionFormComponent {
     this.store.dispatch(QuestionAddRequest({ payload }));
 
     this.dialogRef.close();
-    this.snackBar.open('Dodano pytanie!');
+    this.snackBar.open('Dodano pytanie!', 'Ok');
   }
 
   closeDialog() {

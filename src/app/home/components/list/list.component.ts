@@ -21,6 +21,8 @@ import { MatChipInputEvent } from '@angular/material/chips';
 import { MatDialog } from '@angular/material/dialog';
 import { QuestionFormComponent } from '../question-form/question-form.component';
 import { allTags } from '../../shared/models/tags.constant';
+import { QuestionRemoveRequest } from '../question-remove/data-access/question-remove.actions';
+import { QuestionRemoveComponent } from '../question-remove/question-remove.component';
 
 @Component({
   selector: 'app-list',
@@ -147,6 +149,13 @@ export class ListComponent {
 
   stopPropagation(e: Event) {
     e.stopPropagation();
+  }
+
+  deleteQuestion(question: QuestionsList) {
+    this.dialog.open(QuestionRemoveComponent, {
+      width: '900px',
+      data: question,
+    });
   }
 
   ngOnDestroy() {
