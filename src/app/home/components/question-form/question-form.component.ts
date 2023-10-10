@@ -18,11 +18,11 @@ export class QuestionFormComponent {
     id: this.fb.control(''),
     title: [
       '',
-      [Validators.required, Validators.minLength(3), Validators.maxLength(50)],
+      [Validators.required, Validators.minLength(3), Validators.maxLength(150)],
     ],
     answer: [
       '',
-      [Validators.required, Validators.minLength(3), Validators.maxLength(50)],
+      [Validators.required, Validators.minLength(3), Validators.maxLength(750)],
     ],
     subpoints: this.fb.array([this.fb.control('')]),
     tags: this.fb.control('', [Validators.required]),
