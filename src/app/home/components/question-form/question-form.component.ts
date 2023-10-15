@@ -1,19 +1,14 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { QuestionAddRequest } from './data-access/add/question-add.actions';
-import {
-  FormArray,
-  FormBuilder,
-  FormControl,
-  Validators,
-} from '@angular/forms';
+import { FormArray, FormBuilder, Validators } from '@angular/forms';
 import { allTags } from '../../shared/models/tags.constant';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { QuestionsList } from '../list/models/questions-list.interface';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { v4 as uuid } from 'uuid';
 import { QuestionEditRequest } from './data-access/edit/question-edit.actions';
 import { QuestionEditMode } from './models/question-edit.interface';
+import { QuestionForm } from './models/question-form.interface';
 
 @Component({
   selector: 'app-question-form',
@@ -21,19 +16,21 @@ import { QuestionEditMode } from './models/question-edit.interface';
   styleUrls: ['./question-form.component.scss'],
 })
 export class QuestionFormComponent implements OnInit {
-  questionForm = this.fb.group({
-    id: this.fb.control('') as FormControl<string>,
-    title: [
-      '',
-      [Validators.required, Validators.minLength(3), Validators.maxLength(150)],
-    ],
-    answer: [
-      '',
-      [Validators.required, Validators.minLength(3), Validators.maxLength(750)],
-    ],
+  questionForm = this.fb.group<QuestionForm>({
+    id: this.fb.control(''),
+    title: this.fb.control('', [
+      Validators.required,
+      Validators.minLength(3),
+      Validators.maxLength(150),
+    ]),
+    answer: this.fb.control('', [
+      Validators.required,
+      Validators.minLength(3),
+      Validators.maxLength(750),
+    ]),
     subpoints: this.fb.array([this.fb.control('')]),
     tags: this.fb.control('', [Validators.required]),
-    image: this.fb.control(null) as FormControl<string | null>,
+    image: this.fb.control(null),
   });
   allTags = allTags;
 

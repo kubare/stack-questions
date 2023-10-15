@@ -2,7 +2,7 @@
   "questions": [
     {
       "id": 1,
-      "title": "Na czym polega Accessbility w HTML??",
+      "title": "Na czym polega Accessbility w HTML?",
       "answer": "Polega na tym, żeby tworzyc strone internetową dostepną dla każdego. Każdy użytkownik mimo swoich ograniczen, ma mieć swobodny dostęp do stony. Aby poruszanie po stronie było przyjemne powinniśmy korzystać z sematycznego html.",
       "subpoints": [
         "",
