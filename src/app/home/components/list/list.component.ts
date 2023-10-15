@@ -21,7 +21,6 @@ import { MatChipInputEvent } from '@angular/material/chips';
 import { MatDialog } from '@angular/material/dialog';
 import { QuestionFormComponent } from '../question-form/question-form.component';
 import { allTags } from '../../shared/models/tags.constant';
-import { QuestionRemoveRequest } from '../question-remove/data-access/question-remove.actions';
 import { QuestionRemoveComponent } from '../question-remove/question-remove.component';
 
 @Component({
@@ -98,6 +97,7 @@ export class ListComponent {
   openDialogFormQuestion(): void {
     const dialogRef = this.dialog.open(QuestionFormComponent, {
       width: '900px',
+      data: { editMode: false },
     });
 
     dialogRef
@@ -156,6 +156,22 @@ export class ListComponent {
       width: '900px',
       data: question,
     });
+  }
+
+  editQuestion(question: QuestionsList) {
+    const dialogRef = this.dialog.open(QuestionFormComponent, {
+      width: '900px',
+      data: { question, editMode: true },
+    });
+
+    dialogRef
+      .afterClosed()
+      .pipe(
+        tap(() => {
+          this.store.dispatch(QuestionsListLoad());
+        })
+      )
+      .subscribe();
   }
 
   ngOnDestroy() {

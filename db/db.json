@@ -4,7 +4,10 @@
       "id": 1,
       "title": "Na czym polega Accessbility w HTML?",
       "answer": "Polega na tym, żeby tworzyc strone internetową dostepną dla każdego. Każdy użytkownik mimo swoich ograniczen, ma mieć swobodny dostęp do stony. Aby poruszanie po stronie było przyjemne powinniśmy korzystać z sematycznego html.",
-      "subpoints": null,
+      "subpoints": [
+        "",
+        ""
+      ],
       "tags": "html",
       "image": null
     },
@@ -36,22 +39,6 @@
       "subpoints": null,
       "tags": "typescript",
       "image": "https://i.imgur.com/6cdjFCR.png"
-    },
-    {
-      "id": 5,
-      "title": "Czym jest strict mode i jak go uzyć?",
-      "answer": "Strict mode polega na bardziej rygorystycznym sprawdzaniu kodu przez JavaScript. Możemy to odpalic przez uzycie dyrektywy ‘use strict’ na poczatku pliku lub w funkcji ktorej ma rygorystyczniej sprawdzac kod.",
-      "subpoints": null,
-      "tags": "javascript",
-      "image": null
-    },
-    {
-      "id": 6,
-      "title": "W jaki sposób obsługujemy wyjątki?",
-      "answer": "Przez uzycie metody try/catch. W try wywolujemy funkcję, jeśli ona zgłosi wyjątek wywoła go w catch.",
-      "subpoints": null,
-      "tags": "javascript",
-      "image": null
     },
     {
       "id": 7,
@@ -104,10 +91,827 @@
       "image": null
     },
     {
-      "id": 11,
-      "title": "Promisy co to jest?",
-      "answer": "Jest to obiekt, ktory ma dostepna wartość, czeka na nią lub nigdy jej nie dostanie. Promisy wykonują się asynchornicznie i są uzywane na przykład do zapytan api. Przy promisach uzywamy funkcji zwrotnej .then() która nam zwraca poprawny rezultat jak i negatywny rezultat. Do obslugi bledow możemy uzyc funkcji .catch()",
-      "subpoints": null,
+      "id": "5a24d31a-f458-4257-873c-8c9922dd9421",
+      "title": "Jak działa Inheritance (dziedziczenie)?",
+      "answer": "Ustalnie odgórnych stylów gdzie wszyscy potomkowie będą z nich korzystać. Możemy ustalić takie style na przykład jak font-size, color itp. Wtedy dla każdego potomka nie musimy ustalać tych styli tylko jeden odgórny rodzic nam to zapewnia. Jednak nie możemy dziedziczyć styli typu margin.",
+      "subpoints": [
+        ""
+      ],
+      "tags": "css",
+      "image": null
+    },
+    {
+      "id": "817a5181-707e-4419-9604-eea3585c73e8",
+      "title": "Czym są Pseudo klasy?",
+      "answer": "Są to specjalne klasy, które wyświetlają swoje style w odpowiednich momentach. Przykłady to:",
+      "subpoints": [
+        ":hover - wyświetla style po najechaniu na element kursorem ",
+        ":active - wyświetla style po naciśnięciu na element ",
+        ":first-child / :last-child - wyświetla style dla pierwszego lub ostatniego elementu "
+      ],
+      "tags": "css",
+      "image": null
+    },
+    {
+      "id": "1a95323e-1885-4f7e-9a93-ee4813e52f98",
+      "title": "Jak działają pseudo elementy?",
+      "answer": "Jest to używane do stylowania kawałka elementu HTML. Na przykład mamy blok tekstu w znaczniku <p> i możemy pierwszą linijkę dzięki pseudo elementowi zmodyfikować. ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "css",
+      "image": "https://i.imgur.com/faBmUm6.png"
+    },
+    {
+      "id": "7767d216-dcfb-4dbd-9875-277e27ac9aa7",
+      "title": "Jakie są jednostki miary w CSS?",
+      "answer": "Podstawowe jednostki to:",
+      "subpoints": [
+        "PX – jest jednostką absolutną, czyli nie skaluje się wraz z zmienianiem rozdziałki strony. ",
+        "EM – jest jednostka relatywną, która skaluje się wraz z rozmiarem czcionki elementu. Czyli jeżeli element ma font-size na 16px to 1rem to będzie 16px",
+        "% - jest jednostką relatywną, w zaleznosci ile procent podamy to tyle zajmie powierzchni danego kontenera (diva) ",
+        "REM – jest jednostką relatywną, która bazuje na rozmiarze czcionki odgórnie ustalonej. "
+      ],
+      "tags": "css",
+      "image": "https://i.imgur.com/lVeXlEn.png"
+    },
+    {
+      "id": "24c0e70d-00ba-402d-a264-70d06b5a2df4",
+      "title": "Reset vs Normalizacja",
+      "answer": "Reset i normalizacja polega na nadpisywaniu domyślnych stylów przeglądarki i użyciu \t\tswoich. Zazwyczaj używane są do ustawienia własnych marginow i paddingow na stronie. \tRóżnica jest taka, że reset totalnie resetuje style elementow HTML (nadpisujemy style dla \telementow html) i developer ustawia style od zera. Normalizacja polega na domyślnych \tstylach przeglądarki jedynie dodając swoje style (dodanie selektorow do elementow) aby \tbyły jak najbardziej użyteczne. Dla programisty lepsze rozwiązanie do normalizacja. ",
+      "subpoints": [
+        "",
+        "",
+        ""
+      ],
+      "tags": "css",
+      "image": null
+    },
+    {
+      "id": "a6f3c7a0-a563-474c-b3c9-c5c7a27c695e",
+      "title": "Co to jest Box model?",
+      "answer": "Box model polega na tym, że przeglądarka wyświetla dany element HTML w postaci “pudełka” z określonymi paddingami/marginami wprowadzonymi przez developera.  ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "css",
+      "image": "https://i.imgur.com/ioHxm7M.png"
+    },
+    {
+      "id": "6cdb14c5-a2d2-4300-af74-99334133d679",
+      "title": "Flex vs Grid",
+      "answer": "Flex służy do tworzenia jednowymiarowych kontenerów wzdłuż osi X lub Y. Grid jest \t\tdwuwymiarowy, możemy tworzyć kontenery gdzie możemy jednocześnie zarządzać ilościom \tkolumn i wierszy. Polecenia dla flexa to np. Display: flex, flex-direction, justify-content. Polecenia dla grida to np. Display: grid, grid-template-columns, grid-gap. ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "css",
+      "image": "https://i.imgur.com/e7JuACG.png"
+    },
+    {
+      "id": "4e5ee4bd-932d-44e5-97ac-340e0e2b4d55",
+      "title": "CSS vs SCSS/SASS",
+      "answer": "SCSS i SASS to rozszerzony CSS, który ma dodatkowe funkcje. Przykładowo możemy stosować zagnieżdżenia, możemy używać zmiennych.",
+      "subpoints": [
+        ""
+      ],
+      "tags": "css",
+      "image": null
+    },
+    {
+      "id": "4b9c001c-1753-48df-aa40-8ff0609400f9",
+      "title": "Co to jest delegowanie zdarzen?  ",
+      "answer": "Dodanie EventListenerow(click, submit etc) do elementu nadrzędnego zamiast dodawania ich do potomków. EventListener będzie wywołany za każdym razem kiedy użyjemy elementu potomnego. ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "298d1905-11c6-4394-9a7c-0f85c1e21cea",
+      "title": "Jak działa this w JS?",
+      "answer": "Ogólnikowo to this trzyma w sobie jakis kontekst, który jest wywoływany przez jakąs funkcje. Zazwyczaj this trzyma obiekt.",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "5365170a-c66a-4d64-b4ec-5b7361f92f86",
+      "title": "Czym jest dziedziczenie prototypowe? (__proto__ vs [[prototype]] vs Object.prototype) ",
+      "answer": "Zawsze jak stworzymy jakiś obiekt w JavaScript, dziedziczy on po globalnym obiekcie Object, a dokładniej po tym, co znajduje się w Object.prototype. W chwili tworzenia obiektu ustawiana jest jego wewnętrzna właściwość [[Prototype]]. W dokumentacji jest ona zapisana z dwoma nawiasami kwadratowymi. Jeżeli zastanawiacie się jak dostać się do właściwości [[Prototype]] to jest do tego specjalny getter i setter o nazwie __proto__",
+      "subpoints": [
+        "[[Prototype]] - zapis [[Prototype]] w podwójnych klamrach to określenie wewnętrznej właściwości obiektu, który tworzymy. Nie mamy dostępu bezpośrednio do tej właściwości przez taką nazwę, tak jest ona po prostu określona w dokumentacji. Do tej właściwości dopisywany jest prototyp z innego obiektu zazwyczaj będzie to prototyp z Object.prototype. Jest to więc miejsce, w którym przetrzymywany jest prototyp obiektu z którego został stworzony nasz nowy obiekt.",
+        "__proto__ - zapis z podwójnymi podkreśleniami na początku i końcu słowa proto to setter i getter do wewnętrznej właściwości obiektu [[Prototype]]. Między innymi ten akcesor pozwala nam pobrać prototyp, który posłużył do stworzenia obiektu. Również przez tą właściwość możemy ręcznie ustawić prototyp obiektu. Ponieważ nie możemy się dostać do obiektu przez nazwę [[Prototype]] to mamy dostęp przez ten akcesor.",
+        "Object.prototype to prototyp dla obiektów. Gdy obiekty są tworzone, prototyp ten jest wykorzystywany przez JavaScript i ustawiony na wewnętrznej właściwości [[Prototype]]. W Object.prototype istnieją pewne gotowe funkcjonalności, które są przekazywane właśnie przez dziedziczenie prototypowe."
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "1f2bce1f-7c0e-4240-96fa-5d36bb16b3d4",
+      "title": "Null vs undefined",
+      "answer": "undefined dostaniemy w przypadku, gdy do zmiennej nic nie mamy przypisane. Null dostaniemy to jest jakas wartosc przypisana do zmiennej ale nie mamy dostepu do niej. ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "02cbd315-6228-4b9d-b114-ea22b787bb2a",
+      "title": "Czym są domkniecia (clousure)?",
+      "answer": "Są to funkcje, które mają dostęp do zmiennych zewnetrznych. Czyli mamy jakąs funkcję A, która jest zagnieżdzona w innej funkcji B to funkcja A ma dostęp do wartości zmiennych funkcji B. Czyli taka funkcja jest domknięta. Wada to konsumują dużo pamieci. \n\t ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": "https://i.imgur.com/bInuNhd.png"
+    },
+    {
+      "id": "a99c9c2f-0290-441c-ab65-21adb1a3d595",
+      "title": "map() vs forEach()",
+      "answer": "Map() iteruje wszystkie elementy tablicy i zwraca nową tablice (nie mutuje elementow z oryginalnej tablicy). ForEach() itereuje wszystkie elementy tablicy ale nie zwraca nowej. ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "c1a33fb5-2997-4274-b2f1-9c7d4ec4e980",
+      "title": "Funkcja anoninowa co to?",
+      "answer": "Funkcja bez nazwy, wywołujemy ją jako callback(funkcja zwrtona)",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "f3b65393-1467-4737-9370-90bdc639beba",
+      "title": "Jakie są różnice między obiektami macierzystymi a obiektami hosta? ",
+      "answer": "Obiekty macierzyste są wbudowane w JS czyli String, Object, Math, Function. Obiekty hosta są dostarczane przez przeglądarke np. Window, XMLHTTPRequest ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "3f46b952-97d5-4269-9124-3b9da1bf709a",
+      "title": "Jaka jest różnica między .call a .apply ?",
+      "answer": "Call i apply są wykorzystywane do wywołania funkcji. W call parametry podajemy po przecinku, w apply możemy podac jako pojedynczy argument cała tablice.",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": "https://i.imgur.com/fmWng2s.png"
+    },
+    {
+      "id": "320b15e7-8ebd-4b80-a2f4-56f17550da0e",
+      "title": "Co to jest event bubbling?",
+      "answer": "Polega na tym, ze dane zdarzenie najpierw wykonuje się w najbardziej wewnętrznym elemencie drzewa DOM i idzie po potomkach do zewnetrznego elementu drzewa DOM. Czyli w dziecku wywołuje się jakies zdarzenie i jest bubblingowane do rodzica. ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "4c5f166e-6761-4984-ab10-b6fbab545dd3",
+      "title": "Różnica między == a === ",
+      "answer": "Podwójne porównanie sprawdza tylko wartość zmiennych, gdy potrójne porównanie sprawdza wartość plus typ zmiennych. ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "e892da9b-1d07-4cc3-a33f-d3d130b5e5f2",
+      "title": "Promisy co to jest ?",
+      "answer": "Jest to obiekt, który ma dostępna wartość, czeka na nią lub nigdy jej nie dostanie. Promisy \twykonują się asynchornicznie i są używane na przykład do zapytań api. Przy promisach używamy funkcji zwrotnej .then() która nam zwraca poprawny rezultat jak i negatywny rezultat. Do obsługi bledow możemy uzyc funkcji .catch() ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "813b3983-6553-4b5c-85ee-bac74ad5a4a8",
+      "title": "Var vs let vs const",
+      "answer": "Var w odroznieniu do let/const działa tak, że można się odwolac do zmiennej var przed jej \timplementacja. Dla let/const tak to nie działa. Dodatkowo let używamy do zmiennych \t\tdynaminczych, które zmieniają swoją referencje w trakcie działania aplikacji. Const jest\tzmienną stałą, nie jest zmieniana jej wartość podczas działania aplikacji ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "3ce503c9-059a-492b-a007-22ec824e02cd",
+      "title": "Czym charakteryzują się Arrow functions?",
+      "answer": "Funkcje strzałkowe w odróżnieniu do normalnych funkcji są krótsze w zapisze. Używamy ich na przykład w funkcjach anonimowych gdzie używamy metod typu map/forEach/filter etc.",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "263120ab-1461-4fd1-8353-f7eca6d4330f",
+      "title": "Na czym polega Funkcja wyzszego rzedu?",
+      "answer": "To funkcja, która przyjmuje jako parametr funkcje (czyli funkcje callback) lub zwraca funkcje. W tym przypadku map jest funkcją wyzszego rzedu ponieważ przyjmuje inna funkcje.",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": "https://i.imgur.com/r2aMGBD.png"
+    },
+    {
+      "id": "ac70d541-f7df-477c-bf4b-3432aa6d6ba9",
+      "title": "Co to jes Hoisting?",
+      "answer": "Polega na “podniesieniu” na góre danego pliku (index.js) funkcji (zadeklarowanej przez slowo klucz function) lub zmiennej var. W praktyce polega na tym, że możemy wywołać daną funkcje przed jej deklaracją. Zapewnia nam to hoisting. Dla arrow functions lub zmiennych let/const hoisting nie działa. ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": "https://i.imgur.com/sHtcgxF.png"
+    },
+    {
+      "id": "2c681682-ea8b-4c2e-9510-d3dd9f7cd86a",
+      "title": "Czy istnieje prywatny constructor w JS?",
+      "answer": "Domyślnie nie możemy zadeklarować prywatnego konstruktora w JavaScript. Jednak możemy osiągnąć pewien zakres prywatności dla konstruktora przez domknięcia (clousures). ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": "https://i.imgur.com/wvffIlu.png"
+    },
+    {
+      "id": "271a9bab-f27c-499b-9616-8a6d99fd0b06",
+      "title": "Funkcja z podwojnymi nawiasami (np. HandleSetFn()())",
+      "answer": "Funkcje z podwójnymi nawiasami wywołujemy wtedy, gdy dana funkcja ma zagnieżdżoną kolejna funkcje w sobie do wywołania. Przez podwojne nawiasy wywołamy funkcję nadrzędną oraz tą zagnieżdżoną. ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": "https://i.imgur.com/Ro7WiFA.png"
+    },
+    {
+      "id": "89baf3ea-8bc5-4a03-9517-eeb3d2a6ef59",
+      "title": "Co oznacza super()?",
+      "answer": "W języku JavaScript super() to specjalna metoda, która jest używana w kontekście dziedziczenia klas. Służy do wywoływania konstruktora nadrzędnego (klasy nadrzędnej) w klasie potomnej. super() musi być wywołane wewnątrz konstruktora klasy potomnej, aby zainicjować właściwości i metody dziedziczone z klasy nadrzędnej.",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "9f34f6a4-79f4-4d0d-a41e-1a1ca9c82c7a",
+      "title": "Czym jest Execution Context?",
+      "answer": "To mechanizm w JavaScript, który obsługuje wykonanie kodu. GEC i FEC tworzy stos wywołan (callstack), który dziala synchronicznie. Jeśli jakis kontekst skonczy swoja prace jest usuwany z callstacka. Mamy dwa glowne rodzaje EC: ",
+      "subpoints": [
+        "Global Execution Context – jest wykonywany jako pierwszy Context zaraz po odpaleniu aplikacji. Zawiera on dostep do globalnego zakresu kodu czyli zmiennych i funkcji na poziomie globalnym. Jest tylko jeden GEC podczas wykonania mechanizmu Exectuon Context ",
+        "Function Execution Context – jest wykonywany po GEC. Zawiera on dostep do wnętrza funkcji, które są wykonywane. Może być wiele FEC podczas całego działania Execution Context (wiele bo można wiele razy wywolywac funkcje do których FEC ma dostep) "
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "0afd464f-fc00-4a95-8b05-ee32c52bfd29",
+      "title": "CallStack co to?",
+      "answer": "Call stack (stos wywołań) to struktura danych używana do śledzenia wywołań funkcji w trakcie działania programu. Jest to rodzaj stosu LIFO (Last-In-First-Out), co oznacza, że ostatnio dodana funkcja do stosu jest pierwsza do wywołania i usunięcia.",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "d7ae5a03-b4bb-4bb7-a8c0-79f3bd40c068",
+      "title": "Ile jest callstacków w JS?",
+      "answer": "Tylko jeden.",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "5a47a623-505d-4cc4-85d9-896b35e836cd",
+      "title": "Czy setTimeout() należy do JS?",
+      "answer": "Nie, setTimeout jest metodą udostępnioną przez Web API. ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "febac52a-8001-4e2e-abb5-9f0d67b46883",
+      "title": "Jak dziala shadowing?",
+      "answer": "Jest to sytuacja w której zmienna znajdująca się w wewnętrznym Scope przesłania zmienną znajdującą się w zewnętrznym scopie.",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "e6073231-701d-4fff-b811-1e1f7bfc7559",
+      "title": "Czym jest czysta funkcja?",
+      "answer": "Polega na tym, ze zwraca tą samą wartość dla tych samych danych wejściowych.",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "10599a2c-dc76-42aa-abd4-77e5e4f770e2",
+      "title": "Na czym polega Event Loop?",
+      "answer": "Pętla zdarzeń (event loop) to kluczowy mechanizm w języku JavaScript, który kontroluje asynchroniczne operacje i zapewnia płynność działania aplikacji. Jeżeli wywolamy np. SetTimeout() (który jest async) to dzieki event loop nie zatrzyma on pracy glownego callstacka i wykona setTimeout() w odpowiednim czasie. ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "30f20dc0-2b53-4a88-92cd-6c329cad45a7",
+      "title": "Czym jest strict mode i jak go użyć?",
+      "answer": "Strict mode polega na bardziej rygorystycznym sprawdzaniu kodu przez JavaScript. Możemy to odpalic przez uzycie dyrektywy ‘use strict’ na poczatku pliku lub w funkcji ktorej ma rygorystyczniej sprawdzac kod. ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "ab2e1ba1-8f5e-461c-b63d-bd8b4563b1a6",
+      "title": "W jaki sposób obslugujemy wyjatki w JS?",
+      "answer": "Try/catch/finally",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": "https://i.imgur.com/VuRrf1r.png"
+    },
+    {
+      "id": "98292bb1-4d91-4189-8277-7d74646af20e",
+      "title": "Kiedy używamy funkcji zwrotnych? (callbacks)",
+      "answer": "Przy funkcjach typu forEach/map/filter, asynchorniczne funkcje np. Pobieranie danych z serwera, w funkcjach obslugujace zdarzenia (addEventListener itp.) ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "1bafacd6-86ea-4027-932c-3a650f6f3eb7",
+      "title": "W jaki sposób informacje do zmiennej są przekazywane?",
+      "answer": "Przez wartość, bądź referencję.",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "4bb11d67-6bb0-412b-89c9-67d0ef0b71de",
+      "title": "Jakie typowanie wykorzystuje TypeScript?",
+      "answer": "Generyki, interfejsy, type, unie ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "typescript",
+      "image": null
+    },
+    {
+      "id": "7ae5c0a4-72c8-4000-8ebc-38d65e62ca59",
+      "title": "Jak działają Unie?",
+      "answer": "Unie polegają na tym, że zmienna lub funkcja może przyjąc/zwracać jedną z kilku możliwych \twartości.",
+      "subpoints": [
+        ""
+      ],
+      "tags": "typescript",
+      "image": null
+    },
+    {
+      "id": "5c703b90-a71d-4b12-bdf0-9424c65c53ec",
+      "title": "Modyfikatory dostępu w TS",
+      "answer": "Mamy trzy modyfikatory:",
+      "subpoints": [
+        "Public – domyslny modyfikator dostępu jest dostepny wewnatrz klasy i na zewnątrz. ",
+        "Private – dostep do pol private jest tylko na poziomie klasy, na zewnarz nie mamy dostepu. ",
+        "Protected – dostep do pol protected mamy tylko na poziomie klasy lub klas dziedziczacych po klasie nadrzednej. \t "
+      ],
+      "tags": "typescript",
+      "image": null
+    },
+    {
+      "id": "e421b6ff-f571-4779-8af3-7f52273a9c9b",
+      "title": "Czym są Utility types?",
+      "answer": "Wbudowane w TypeScript narzedzia ułatwiające prace nad typami. Kilka z nich to:",
+      "subpoints": [
+        "Partial<Type> - Tworzy nowy typ, który zawiera wszystkie klucze z oryginalnego typu ale są oznaczone jako opcjonalne (mogą być undeafined)",
+        "Record<Keys, Type> - Tworzy typ który posiada klucze i zestaw wartości im odpowiadający.",
+        "Pick<Type, Keys> - Tworzy nowy typ, ktory posiada tylko klucze z oryginalnego typu które podamy mu w drugim parametrze.",
+        "Omit<Type, Keys> - Tworzy typ, ktory posiada wszystkie klucze z oryginalnego typu oprocz tych ktore podamy mu w drugim parametrze. To jest przeciwieństwo Pick<T, K>"
+      ],
+      "tags": "typescript",
+      "image": null
+    },
+    {
+      "id": "a11676e4-31ed-4e48-924a-f4ea82f1a518",
+      "title": "Jak działa enum?",
+      "answer": "Enum to typ który przyjmuje określoną ilość stałych wartości. Możemy otypować zmienną enumem i ta zmienna może mieć wartość jedynie która zawiera się w danym enumie. ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "typescript",
+      "image": null
+    },
+    {
+      "id": "a205b586-2be1-4368-b9bd-f6d439e1bbff",
+      "title": "Czym są tuple?",
+      "answer": "Tuple to typ danych, który pozwala nam określić rozmiar tablicy, który będzie przyjmował rożne typy. Ważne, żeby było zadeklarowane tyle typów ile będzie wartości w tablicy. ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "typescript",
+      "image": "https://i.imgur.com/L7DRGfX.png"
+    },
+    {
+      "id": "f6ca909b-833c-491c-a00d-777bedce6974",
+      "title": "Any vs unknown",
+      "answer": "Any pozwala przyjąc zmiennej losową wartość (string, number itd.) i kompilator nie będzie sprawdzał typu tej zmiennej. Unknown jest bezpieczniejsze, bo jak przypiszemy jakąś wartość do zmiennej musimy sprawdzić jaki ta zmienna ma typ.",
+      "subpoints": [
+        ""
+      ],
+      "tags": "typescript",
+      "image": null
+    },
+    {
+      "id": "6e188344-da35-499e-b0fc-e082813fe584",
+      "title": "Jak działa Depedency Injection?",
+      "answer": "Wstrzykiwanie zaleznosci. Polega na zarządaniem zaleznosciami miedzy roznymi komponentami a serwisami. Do komponentu możemy w konkstrutorze wstrzyknąć dany serwis z którego możemy korzystac z roznych metod / obiektow / uslug. Dzieki temu unikamy implementowanie powtarzalnego kodu na poziomie kazdego z komponentow gdzie potrzebujemy danej uslugi tylko trzymamy ją w danym serwisie, który możemy wstrzyknac do konstruktora w miejscu gdzie tego potrzebujemy. ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "angular",
+      "image": null
+    },
+    {
+      "id": "3842cca5-8379-4f44-8f42-e1afb2993ea9",
+      "title": "Jak działa Injector?",
+      "answer": "Jest to obiekt, który trzyma w sobie instancje serwisow, których zaleznosci chcemy uzyc w \tkomponencie. ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "angular",
+      "image": "https://i.imgur.com/xtN8eiY.png"
+    },
+    {
+      "id": "b7d33106-b44f-4327-82c1-7080b6031af3",
+      "title": "Co to jest Change Detection?",
+      "answer": "Angular posiada mechanizm wykrywania zmian (Change Detector) dołączany do każdego komponentu, który odpowiada za synchronizację danych pomiędzy komponentem a jego templatką. To właśnie dzięki niemu drzewo DOM całej naszej aplikacji odzwierciedla aktualny stan aplikacji. Wyróżniamy dwie strategie Change Detection:\n\n",
+      "subpoints": [
+        "Default - W domyślnej konfiguracji gdy uruchomiony zostanie Change Detector, wszystkie komponenty w drzewie sprawdzane są w kolejności od góry do samego dołu.",
+        "Konfiguracja OnPush pozwala nam zoptymalizować ilość uruchamianych mechanizmów Change Detector (nie są uruchamiane dla wszystkich komponentów w każdym przypadku). Komponenty i ich dzieci nie są aktualizowane zawsze, a jedynie gdy referencja inputu się zmieniła "
+      ],
+      "tags": "angular",
+      "image": null
+    },
+    {
+      "id": "41baadf4-0ec2-4ae5-afdc-e43cb610c827",
+      "title": "markForCheck() vs changeDetection()",
+      "answer": "         ",
+      "subpoints": [
+        "markForCheck() - oznacza wszystkie komponenty od roota do źródłowego jako dirty, Change Detector będzie na nich uruchomiony przy następnym cyklu, nawet jeżeli są to komponenty OnPush.",
+        "detectChanges() – uruchamia Change Detection dla danego komponentu i jego dzieci odrazu"
+      ],
+      "tags": "angular",
+      "image": null
+    },
+    {
+      "id": "0dcd274b-c77a-4cfd-b004-90d8172f173c",
+      "title": "Czym jest Lazy Loading?",
+      "answer": "Polega na dynamicznym ładowaniu modułow. Polega to na tym, ze gdy uzytkownik wejdzie w dany widok na stornie, to uruchamiane są tylko moduly, które posiadają zasoby potrzebne do wygenerowania danego widoku. Plusem lazy loadingu jest to, że nie musimy ładowac przy starcie aplikacji wszystkich dostepnych modułów które by spowolniły prace aplikacji. ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "angular",
+      "image": null
+    },
+    {
+      "id": "f512d286-be05-4674-b887-649aeb77ffc7",
+      "title": "Jakie mamy Lifecycle hooks?",
+      "answer": "        ",
+      "subpoints": [
+        "NgOnChanges - wywołuje się gdy zmieni się wartość w zmiennej @Input() ",
+        "NgOnInit – odpala się tylko raz przy odpaleniu komponentu ",
+        "NgDoCheck – po wykryciu zmian przez change detection wywoluje się ngDoCheck ",
+        "NgOnDestroy – zamyka cykl zycia komponentu, tutaj się odsubkrybuwujemy żeby uniknac wyciekow pamieci"
+      ],
+      "tags": "angular",
+      "image": null
+    },
+    {
+      "id": "85d9b0c2-25bf-40e1-b580-9bfc3055b850",
+      "title": "Constructor() vs ngOnInit()",
+      "answer": "Obie te metody są odpalane na starcie pracy komponentu. Rożnica jest taka, ze ngOnInit to jeden element z cyklu życia komponentu angularowego a constructor() to metoda z JavaScriptu. NgOnInit ma dostęp do elementow drzewa DOM gdzie constructor nie ma. W ngOnInit powinniśmy deklarować bardziej zaawansowaną logikę, gdzie w constructorze zazwyczaj inicjalizujemy zmienne, deklarujemy dostęp do serwisów z których chcemy pobrać logike. ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "angular",
+      "image": null
+    },
+    {
+      "id": "78dfc406-2e29-4eda-addb-22b2ea8bbd26",
+      "title": "Czym są i jakie mamy Dyrektywy strukturalne?",
+      "answer": "Pozwalają dynamicznie zarządzać templatką aplikacji (HTML). Oprócz wbudowanych w angular możemy tworzyć własne dyrektywy które będą uzywane w obrębie danego komponentu\t",
+      "subpoints": [
+        "ngIf – sprawdzenie danej wartości czy ma się wyswietlic czy nie. Uzywana rozniez do asynchronicznego pobierania danych z observabla (async pipe) ",
+        "ngFor - pętla sluząca do iterowania po tablicy i wyswietlaniu wartosci ",
+        "ngSwtich – sluzy do wyswietlenia jednej z kilku dostepnych wartosci\t "
+      ],
+      "tags": "angular",
+      "image": null
+    },
+    {
+      "id": "905af520-157d-41f3-a443-e3c32dcf4336",
+      "title": "Komponenty standalone ",
+      "answer": "To komponenty które działają niezależnie, mogą być użyte w różnych częściach aplikacji. Nie potrzebuja te komponenty zewnatrznych serwisow ani funkcji dostarczanych przez inne komponenty. ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "angular",
+      "image": null
+    },
+    {
+      "id": "0c1bc1f9-b7a7-4fa4-b200-ef86bc11b251",
+      "title": "TrackBy w ngFor jak działa?",
+      "answer": "TrackBy uzywamy z połączeniem dyrektywy ngFor. Pomaga nam poprawic wydajnosc apliakcji przez zminimalizowanie wykonanych zmian w drzewie DOM. Gdy zajdzie zmiana w liscie to ngFor iteruje każdy element i mimo, ze w duzej czesci listy nie wprowadzilismy zmian. Czyli zbednie rerenderujemy elementy listy gdzie nie ma zadnych zmian. Uzycie trackBy powoduje, ze ngFor łapie elementy w liscie które zostaly zmienione/dodane/usuniete i tylko te elementy rerenderuje w drzewie DOM. ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "angular",
+      "image": "https://i.imgur.com/GOQWtcs.png"
+    },
+    {
+      "id": "9959566a-93a7-499d-b25b-0ce8a2490d7c",
+      "title": "Jak poprawić performance aplikacji?",
+      "answer": "       ",
+      "subpoints": [
+        "Strategia AOT – aplikacja buduje się przed uruchomieniem strony w przeglądarce. Pozwala to na optymalizacje wydajności aplikacji. Jest to strategia przeciwna do JIT, która buduje aplikacje w trakcie jej działania (użytkownik wykonuje operacje na stronie). ",
+        "Service Workers - technologia, która jest często wykorzystywana w aplikacjach webowych do obsługi asynchronicznych operacji w tle i poprawy wydajności oraz dostępności aplikacji. Działa w tle przeglądarki i może wykonywać zadania, takie jak pobieranie i przechowywanie zasobów w pamięci podręcznej\t\t\t\t\t\t\t\t\t ",
+        "Lazy Loading",
+        "trackBy ngFor"
+      ],
+      "tags": "angular",
+      "image": null
+    },
+    {
+      "id": "32da4340-ca4c-43c3-9c99-e62dd914c5c9",
+      "title": "Czym są Guardy?",
+      "answer": "Odpowiadają za dostęp użytkownika do danego widoku. W routingu aplikacji implementujemy guarda, który pilnuje czy dany user ma prawo do wejscia w dany widok. Klasy, które wykorzystuje się przy tworzeniu guarda to np.: ",
+      "subpoints": [
+        "CanActivate - jeśli zwrocimy wartosc true user ma dostep do danego komponentu ",
+        "CanActivateChild – to samo ale dziala do zagniezdzonych modulow/komponentow  ",
+        "CanDeactivate – sprawdza czy możemy opuscic dana strone (np. Czy wypelnilismy caly formularz)"
+      ],
+      "tags": "angular",
+      "image": null
+    },
+    {
+      "id": "671171d3-2dd7-460d-ae68-e9074adce043",
+      "title": "Czym są Resolvery?",
+      "answer": "Służą do dostarczenia danych do danego komponentu przed wczytaniem go. Jak użytkownik wchodzi na danego patha dzięki resolverowi dostajemy do komponentu wyświetlanego jakieś dane, które zobaczy użytkownik(komponent dostaje dane które są dostarczane przed samym wyświetleniem komponentu). Implementujemy to na poziomie routingu. ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "angular",
+      "image": "https://i.imgur.com/jolCsoV.png"
+    },
+    {
+      "id": "1e282e81-f169-4aa7-8201-bf0a5974da8d",
+      "title": "Jakie mamy Dekoratory w Angular?",
+      "answer": "Służą do określenia czym dana klasa będzie w aplikacji. Dekoratory implementujemy na samej górze klasy:",
+      "subpoints": [
+        "@Component – komponent z templatka HTML, stylami, logika TS ",
+        "@NgModule – modul gdzie deklarujemy inne komponenty/serwisy/moduly ",
+        "@Injectable – serwis, gdzie implementujemy logike reuzywalna w kilku miejsach. Dekorator najczesciej uzywany z opcją providedIn: root mówiąca, że serwis jest dostępny w kazdym miejscu aplikacji ",
+        "@Pipe – tworzenie pipes, które uzywamy do transformacji danych ",
+        "@Directive – dyrektywy uzywane w templatkach do obslugiwania elementow HTML",
+        ""
+      ],
+      "tags": "angular",
+      "image": null
+    },
+    {
+      "id": "d54a3335-8275-4272-8d0f-a57a0754fbe2",
+      "title": "TemplateRef jak działa?",
+      "answer": "Klasa w Angularze, która reprezentuje szablon HTML w kodzie aplikacji. Pozwala na dynamiczne tworzenie i manipulację elementami interfejsu użytkownika na podstawie szablonów. Przykład wykorzystania TemplateRef: ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "angular",
+      "image": "https://i.imgur.com/s0aUDar.png"
+    },
+    {
+      "id": "91177a09-4851-4347-af0a-b28d628556a3",
+      "title": "Czym jest Observable?",
+      "answer": "Jest to strumien danych. Można to porównać do kranu z wodą. Kran to observable a woda lecąca z tego kranu to dane. Żeby otrzymać wode z kranu trzeba odkręcic zawór, odpowiednikiem tego w RxJS jest operator subscribe() czyli subskrybcja dzięki, której dostajemy dane z observabla. Zawsze potem trzeba kran z wodą zakręcic. Odpowiednikiem tego jest operator unsubscribe(), który konczy prace observabla, żeby dalej nie emitował danych. ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "rxjs",
+      "image": null
+    },
+    {
+      "id": "ad01c4d3-437e-4071-84a2-f272bc2c3bad",
+      "title": "sideEffects czym są?",
+      "answer": "Jest wykonywany podczas przetwarzania strumieni danych. Analogią może być, gdy rura przez, która płynie woda do kranu przytka się. Wtedy w trakcie używania wody trzeba użyć kreta, który rure przeczyści i dostaniemy pełną ilość wody. Jak się subskrybujemy do observabla po dane, chcemy aby wykonał się jakiś side effect, który zwróci nam zmodfydikowane dane, wykona się request do API. Używamy do tego operatora tap(). ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "rxjs",
+      "image": null
+    },
+    {
+      "id": "1b6b04de-f380-4165-bf09-8baf0b50503d",
+      "title": "Czym są pipe connections?",
+      "answer": "Mowa tutaj o operatorach switchMap(), mergeMap(), combineWithLatest(). Są to operatory, dzięki którym możemy otrzymać dane z innego strumienia danych. Nie musimy wtedy robić subskrybcji jednego observabla, w drugim observablu. Odpowiednikiem tego w realnym zyciu jest kran z wodą(który jest w naszym mieszkaniu), który zaciąga wode z innego strumienia należacego do całego bloku mieszkalnego. ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "rxjs",
+      "image": null
+    },
+    {
+      "id": "bcaa9b48-1c9e-4716-8da0-09259424ed7c",
+      "title": "Jak działa mergeMap()?",
+      "answer": "Scala kilka strumieni danych i na wyjściu zwraca nam jednego observabla. Wszystko wykonuje się asynchronicznie. Jak klient przychodzi do kebaba to idzie do kasy i składa zamówienie. Potem czeka na jego wykonanie. W tym czasie przychodzi drugi klient i również sklada zamowienie przy kasie i restauracja również je wykonuje. Potem klient odbiera kebaba mimo, ze zamowienie zlozylo w tym czasie 5 osob. Czyli 5 strumieni danych zostało połączone i zwrocono i tak jedno danie, które otrzymal klient. ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "rxjs",
+      "image": null
+    },
+    {
+      "id": "b0e732b3-3453-4132-91bd-1222eb042a58",
+      "title": "Jak działa switchMap()?",
+      "answer": "W odróznieniu do mergeMap, switchMapa wykonuje tylko najnowszy strumien danych i zwraca jego dane. Czyli przychodzi kilka strumieni danych i switchMapa wykonuje tylko najnowszy a reszte anuluje. Jest to przydatne w przypadku, gdy uzytkownik wykona dana operacje i po chwili wykona inną. Pierwsza operacja dzieki switchMapie jest anulowana i od razu wykonywana jest ta druga. W kontekscie kebabowym polega to na tym, ze jak klient przychodzi do kebsa i zamowi go a potem przyjdzie drugi klient i tez zamowi to kebaba dostanie tylko ten drugi klient. Praca nad pierwszym kebabem klienta zostala przerwana przez przyjscie drugiego klienta ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "rxjs",
+      "image": null
+    },
+    {
+      "id": "e87c30aa-f9c8-41ae-a33f-247df8cc9724",
+      "title": "cold observable🥶  ",
+      "answer": "Polega na tym, ze cold observable emituje strumien danych i zwraca nam dane w momencie subskrybcji. Czyli kazda subskrybcja do cold observabla emituje od nowa dane i je zwrot. To powoduje, ze dane jakie nam observable zwroci nie muszą być takie same. ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "rxjs",
+      "image": null
+    },
+    {
+      "id": "7d88a2ee-5759-442f-a833-db5118c23c1f",
+      "title": "hot observable🥵  ",
+      "answer": "Polega na tym, ze emitowanie danych może odbywac się przed sama subskrybcją. Czyli kazda subskrybcja może odbyc się w innym czasie ale i tak kazda subskrybcja dostanie te same dane. Bo emitowanie danych nie zaczyna się w momencie subskrybcji tylko już przed subem. Przykladem hot observabli mogą być zapytania http. Dostajemy jakies dane z api i zawsze to będą te same dane. ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "rxjs",
+      "image": null
+    },
+    {
+      "id": "2c037e62-1d67-49ea-8df2-b3eda6df8b55",
+      "title": "Czym są Subjects?",
+      "answer": "Są to typy observable. Sa cztery typy:",
+      "subpoints": [
+        "Subject – nie potrzebuje wartości startowej. Dostajesz dane z observabla dopiero po subskrybcji. Nic wczesniej przed subem nie dostaniesz. ",
+        "BehaviorSubject – przyjmuje wartość startową. Po subskrybcji dostaniesz wcześniejsza wartość oraz każdą najnowszą. ",
+        "ReplaySubject – dostaniesz określoną ilość danych z observabla. ",
+        "AsyncSubject – dostaniesz ostatnią wartość z observabla i potem strumien się zamyka. "
+      ],
+      "tags": "rxjs",
+      "image": null
+    },
+    {
+      "id": "4782b0da-8c8e-4f93-8af6-a5034ab5fa28",
+      "title": "Na czym polega Singleton?",
+      "answer": "Polega na tym, że instancja danego obiektu wywołuje się tylko raz.",
+      "subpoints": [
+        ""
+      ],
+      "tags": "patterns",
+      "image": null
+    },
+    {
+      "id": "2a856219-a1b3-4d8d-b166-d272c10cf51d",
+      "title": "Na czym polega Budowniczy?",
+      "answer": "Tworzy złożony obiekt etapami. Przykładem z angulara może być tworzenie dynamicznego formularza, który tworzy go dynamicznie i może mieć różną konfiguracje ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "patterns",
+      "image": "https://i.imgur.com/AFF0VT4.png"
+    },
+    {
+      "id": "6b486603-c109-4256-9979-0d34c7f460a2",
+      "title": "Na czym polega Prototyp?",
+      "answer": "Tworzenie obiektu na podstawie kopiowania istniejących już obiektów. Nie musimy wtedy od zera tworzyc nowego obiektu ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "patterns",
+      "image": "https://i.imgur.com/ABAYsWc.png"
+    },
+    {
+      "id": "174dfd26-a388-4a95-8d5e-fc534b8e2f8c",
+      "title": "Na czym polega Fasada?",
+      "answer": "W angularze może to być przykład z użyciem serwisów do platności. Mamy dwa serwisy, które mają różne funkcjonalności potrzebne do implementacji płatności w systemie. Zamiast do komponentu wstrzykiwac oba te serwisy możemy stworzyc fasade, która zcali te dwa serwisy w jedną funkcjonalność i wtedy tą fasade wstrzykniemy komponentowi ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "patterns",
+      "image": "https://i.imgur.com/AaolgmT.png"
+    },
+    {
+      "id": "8483ff92-eab0-4f8e-aabd-131c4ae28050",
+      "title": "Podaj różnicę między funkcją normalną a funkcją z użyciem keyword ‘async’.",
+      "answer": "Jedyną różnicą między funkcją zwykłą a funkcją zwykłą, jest to, że funkcja async zawsze zwraca promisa.\n",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "b4cf6d0f-4a86-4840-a8b0-a70a7f6d3e9b",
+      "title": "Czy możemy użyć słowa await poza funkcją async?",
+      "answer": "Nie mozemy",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "7bfe8d3e-3e26-43a5-9c0f-26363616ea1f",
+      "title": "Z czego składa się promise?",
+      "answer": "Promise składa się ze state oraz promise result",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "af810dc1-828b-4830-ba94-ec3a517211f0",
+      "title": "Omów promise result",
+      "answer": "Promise result zapisuje jakiekolwiek dane jakie promise zwróci.",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "048d6ae7-ec5c-4668-9b65-f75ac6fc67bc",
+      "title": "Podaj trzy stany promise",
+      "answer": "Pending, resolved, rejected",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "cb0c0b8e-40e1-4b0d-b716-d4245b20648c",
+      "title": "Na czym polega bind()?",
+      "answer": "Użycie bind() w odróznieniu do call/apply nie wywołuje funkcji a jedynie zwraca ją z nowo przypisanymi wartościami.",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "ecddcf61-6c21-4f72-b972-d7ccf5ee48b7",
+      "title": "Czym jest przeciążanie funkcji, czy istnieje w JS?",
+      "answer": "Przeciążanie funkcji polega na tym, że dana funkcja zachowuje się inaczej w\nzależności od przyjętej ilości argumentów. Można nadpisać funkcję tak aby przy\ninnej ilości argumentów funkcja zachowała się inaczej. W JavaScriptcie\nmechanizm przeciążania funkcji nie istnieje\n",
+      "subpoints": [
+        ""
+      ],
       "tags": "javascript",
       "image": null
     }

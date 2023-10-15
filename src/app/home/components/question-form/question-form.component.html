@@ -1,7 +1,7 @@
 <div class="form">
   <div class="form__header">
     <div class="form__header-info">
-      <h3>DODAJ PYTANIE</h3>
+      <h3>{{ data.editMode ? "EDYTUJ PYTANIE" : "DODAJ PYTANIE" }}</h3>
     </div>
     <button mat-icon-button (click)="closeDialog()">
       <mat-icon>close</mat-icon>
@@ -92,9 +92,9 @@
       mat-flat-button
       color="primary"
       [disabled]="questionForm.invalid"
-      (click)="submitForm()"
+      (click)="data.editMode ? editQuestion() : submitForm()"
     >
-      Dodaj pytanie
+      {{ data.editMode ? "Edytuj pytanie" : "Dodaj pytanie" }}
     </button>
   </form>
 </div>
