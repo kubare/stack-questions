@@ -40,4 +40,11 @@ export class QuestionsListService {
       `http://localhost:3000/questions/${id}`
     );
   }
+
+  edit(question?: QuestionsList): Observable<QuestionsList> {
+    return this.http.put<QuestionsList>(
+      `http://localhost:3000/questions/${question?.id}`,
+      question
+    );
+  }
 }

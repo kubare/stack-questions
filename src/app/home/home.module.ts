@@ -56,9 +56,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialog } from '@angular/material/dialog';
 import { QuestionFormComponent } from './components/question-form/question-form.component';
-import { QuestionAddEffects } from './components/question-form/data-access/question-add.effects';
+import { QuestionAddEffects } from './components/question-form/data-access/add/question-add.effects';
 import { QuestionRemoveComponent } from './components/question-remove/question-remove.component';
 import { QuestionRemoveEffects } from './components/question-remove/data-access/question-remove.effects';
+import { QuestionEditEffects } from './components/question-form/data-access/edit/question-edit.effects';
 
 @NgModule({
   declarations: [
@@ -77,6 +78,7 @@ import { QuestionRemoveEffects } from './components/question-remove/data-access/
       QuestionsListEffects,
       QuestionAddEffects,
       QuestionRemoveEffects,
+      QuestionEditEffects,
     ]),
     ReactiveFormsModule,
     A11yModule,

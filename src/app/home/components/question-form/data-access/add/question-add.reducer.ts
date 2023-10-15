@@ -5,7 +5,7 @@ import {
   QuestionAddSuccess,
   QuestionAddFail,
   QuestionAddRequest,
-} from './question-add.actions';
+} from './add/question-add.actions';
 
 export interface QuestionAddState {
   loadState: LoadingState;

@@ -28,7 +28,7 @@
               "
             >
               <ul *ngFor="let subPoint of singleRandQuestion!.subpoints">
-                <li>{{ subPoint }}</li>
+                <li *ngIf="subPoint">{{ subPoint }}</li>
               </ul>
             </div>
 

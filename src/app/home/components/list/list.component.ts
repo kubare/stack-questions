@@ -98,6 +98,7 @@ export class ListComponent {
   openDialogFormQuestion(): void {
     const dialogRef = this.dialog.open(QuestionFormComponent, {
       width: '900px',
+      data: { editMode: false },
     });
 
     dialogRef
@@ -156,6 +157,22 @@ export class ListComponent {
       width: '900px',
       data: question,
     });
+  }
+
+  editQuestion(question: QuestionsList) {
+    const dialogRef = this.dialog.open(QuestionFormComponent, {
+      width: '900px',
+      data: { question: question, editMode: true },
+    });
+
+    dialogRef
+      .afterClosed()
+      .pipe(
+        tap(() => {
+          this.store.dispatch(QuestionsListLoad());
+        })
+      )
+      .subscribe();
   }
 
   ngOnDestroy() {

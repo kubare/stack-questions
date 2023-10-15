@@ -104,7 +104,9 @@
               <mat-icon>more_vert</mat-icon>
             </button>
             <mat-menu #menu="matMenu">
-              <button mat-menu-item>Edytuj</button>
+              <button mat-menu-item (click)="editQuestion(element)">
+                Edytuj
+              </button>
               <button mat-menu-item (click)="deleteQuestion(element)">
                 Usuń
               </button>

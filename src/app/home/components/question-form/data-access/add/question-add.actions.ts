@@ -1,6 +1,6 @@
 import { createAction, props } from '@ngrx/store';
 import { HttpErrorResponse } from '@angular/common/http';
-import { QuestionsList } from '../../list/models/questions-list.interface';
+import { QuestionsList } from '../../../list/models/questions-list.interface';
 
 const questionAdd = {
   request: '[Questions Add] Request',

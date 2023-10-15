@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { catchError, map, of, switchMap } from 'rxjs';
-import { QuestionsListService } from '../../list/data-access/questions-list.service';
+import { QuestionsListService } from '../../../list/data-access/questions-list.service';
 import {
   QuestionAddFail,
   QuestionAddRequest,
