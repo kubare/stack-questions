@@ -35,6 +35,12 @@ tr.example-element-row:not(.example-expanded-row):hover {
     gap: 8px;
   }
 
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
   &__image {
     display: block;
     margin-left: auto;
@@ -49,6 +55,14 @@ tr.example-element-row:not(.example-expanded-row):hover {
 
   &__chip {
     --mdc-chip-label-text-color: #fff;
+  }
+
+  &__dot {
+    height: 8px;
+    width: 8px;
+    background-color: #fa5c74;
+    border-radius: 50%;
+    display: inline-block;
   }
 
   &__filters {
