@@ -86,9 +86,15 @@
       >
         <th mat-header-cell *matHeaderCellDef>{{ column.label }}</th>
         <td mat-cell *matCellDef="let element">
-          <ng-container *ngIf="column.label !== 'Tagi'; else tag">
-            {{ element[column.value] }}
-          </ng-container>
+          <div *ngIf="column.value !== 'tags'; else tag" class="box__title">
+            <span>{{ element[column.value] }}</span>
+            <span
+              *ngIf="element.favorite && column.value === 'title'"
+              matTooltip="Ulubione pytanie"
+              class="box__dot"
+            ></span>
+          </div>
+
           <ng-template #tag>
             <div class="box__tag">
               <mat-chip-listbox>
