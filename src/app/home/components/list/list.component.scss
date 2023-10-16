@@ -81,6 +81,12 @@ tr.example-element-row:not(.example-expanded-row):hover {
     display: flex;
     justify-content: flex-end;
   }
+
+  &__empty-list {
+    display: flex;
+    justify-content: center;
+    color: #b5b5b5;
+  }
 }
 
 .flex-box:nth-child(1) {

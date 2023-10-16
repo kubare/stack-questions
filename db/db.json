@@ -10,7 +10,7 @@
       ],
       "tags": "html",
       "image": null,
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 2,
@@ -19,7 +19,7 @@
       "subpoints": null,
       "tags": "html",
       "image": null,
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 3,
@@ -146,7 +146,7 @@
       ],
       "tags": "css",
       "image": "https://i.imgur.com/lVeXlEn.png",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": "24c0e70d-00ba-402d-a264-70d06b5a2df4",
@@ -249,7 +249,7 @@
       ],
       "tags": "javascript",
       "image": "https://i.imgur.com/bInuNhd.png",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": "a99c9c2f-0290-441c-ab65-21adb1a3d595",
@@ -689,7 +689,7 @@
       ],
       "tags": "angular",
       "image": null,
-      "favorite": true
+      "favorite": false
     },
     {
       "id": "78dfc406-2e29-4eda-addb-22b2ea8bbd26",
