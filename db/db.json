@@ -10,7 +10,7 @@
       ],
       "tags": "html",
       "image": null,
-      "favourite": true
+      "favorite": true
     },
     {
       "id": 2,
@@ -19,7 +19,7 @@
       "subpoints": null,
       "tags": "html",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": 3,
@@ -33,7 +33,7 @@
       ],
       "tags": "css",
       "image": "https://i.imgur.com/HzBcCzG.png",
-      "favourite": false
+      "favorite": false
     },
     {
       "id": 4,
@@ -42,7 +42,7 @@
       "subpoints": null,
       "tags": "typescript",
       "image": "https://i.imgur.com/6cdjFCR.png",
-      "favourite": false
+      "favorite": false
     },
     {
       "id": 7,
@@ -51,7 +51,7 @@
       "subpoints": null,
       "tags": "css",
       "image": "https://i.imgur.com/BG1aU3x.png",
-      "favourite": false
+      "favorite": false
     },
     {
       "id": 8,
@@ -64,7 +64,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": 9,
@@ -73,7 +73,7 @@
       "subpoints": null,
       "tags": "typescript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": 10,
@@ -85,7 +85,7 @@
       ],
       "tags": "typescript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": 10,
@@ -97,7 +97,7 @@
       ],
       "tags": "angular",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "5a24d31a-f458-4257-873c-8c9922dd9421",
@@ -108,7 +108,7 @@
       ],
       "tags": "css",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "817a5181-707e-4419-9604-eea3585c73e8",
@@ -121,7 +121,7 @@
       ],
       "tags": "css",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "1a95323e-1885-4f7e-9a93-ee4813e52f98",
@@ -132,7 +132,7 @@
       ],
       "tags": "css",
       "image": "https://i.imgur.com/faBmUm6.png",
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "7767d216-dcfb-4dbd-9875-277e27ac9aa7",
@@ -146,7 +146,7 @@
       ],
       "tags": "css",
       "image": "https://i.imgur.com/lVeXlEn.png",
-      "favourite": true
+      "favorite": true
     },
     {
       "id": "24c0e70d-00ba-402d-a264-70d06b5a2df4",
@@ -159,7 +159,7 @@
       ],
       "tags": "css",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "a6f3c7a0-a563-474c-b3c9-c5c7a27c695e",
@@ -170,7 +170,7 @@
       ],
       "tags": "css",
       "image": "https://i.imgur.com/ioHxm7M.png",
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "6cdb14c5-a2d2-4300-af74-99334133d679",
@@ -181,7 +181,7 @@
       ],
       "tags": "css",
       "image": "https://i.imgur.com/e7JuACG.png",
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "4e5ee4bd-932d-44e5-97ac-340e0e2b4d55",
@@ -192,7 +192,7 @@
       ],
       "tags": "css",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "4b9c001c-1753-48df-aa40-8ff0609400f9",
@@ -203,7 +203,7 @@
       ],
       "tags": "javascript",
       "image": "https://i.imgur.com/EcZNMch.png",
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "298d1905-11c6-4394-9a7c-0f85c1e21cea",
@@ -214,7 +214,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "5365170a-c66a-4d64-b4ec-5b7361f92f86",
@@ -227,7 +227,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "1f2bce1f-7c0e-4240-96fa-5d36bb16b3d4",
@@ -238,7 +238,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "02cbd315-6228-4b9d-b114-ea22b787bb2a",
@@ -249,7 +249,7 @@
       ],
       "tags": "javascript",
       "image": "https://i.imgur.com/bInuNhd.png",
-      "favourite": true
+      "favorite": true
     },
     {
       "id": "a99c9c2f-0290-441c-ab65-21adb1a3d595",
@@ -260,7 +260,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "c1a33fb5-2997-4274-b2f1-9c7d4ec4e980",
@@ -271,7 +271,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "f3b65393-1467-4737-9370-90bdc639beba",
@@ -282,7 +282,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "3f46b952-97d5-4269-9124-3b9da1bf709a",
@@ -293,7 +293,7 @@
       ],
       "tags": "javascript",
       "image": "https://i.imgur.com/fmWng2s.png",
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "320b15e7-8ebd-4b80-a2f4-56f17550da0e",
@@ -304,7 +304,7 @@
       ],
       "tags": "javascript",
       "image": "https://i.imgur.com/i9eiIs8.png",
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "4c5f166e-6761-4984-ab10-b6fbab545dd3",
@@ -315,7 +315,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "e892da9b-1d07-4cc3-a33f-d3d130b5e5f2",
@@ -326,7 +326,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "813b3983-6553-4b5c-85ee-bac74ad5a4a8",
@@ -337,7 +337,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "3ce503c9-059a-492b-a007-22ec824e02cd",
@@ -348,7 +348,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "263120ab-1461-4fd1-8353-f7eca6d4330f",
@@ -359,7 +359,7 @@
       ],
       "tags": "javascript",
       "image": "https://i.imgur.com/r2aMGBD.png",
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "ac70d541-f7df-477c-bf4b-3432aa6d6ba9",
@@ -370,7 +370,7 @@
       ],
       "tags": "javascript",
       "image": "https://i.imgur.com/sHtcgxF.png",
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "2c681682-ea8b-4c2e-9510-d3dd9f7cd86a",
@@ -381,7 +381,7 @@
       ],
       "tags": "javascript",
       "image": "https://i.imgur.com/wvffIlu.png",
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "271a9bab-f27c-499b-9616-8a6d99fd0b06",
@@ -392,7 +392,7 @@
       ],
       "tags": "javascript",
       "image": "https://i.imgur.com/Ro7WiFA.png",
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "89baf3ea-8bc5-4a03-9517-eeb3d2a6ef59",
@@ -403,7 +403,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "9f34f6a4-79f4-4d0d-a41e-1a1ca9c82c7a",
@@ -415,7 +415,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "0afd464f-fc00-4a95-8b05-ee32c52bfd29",
@@ -426,7 +426,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "d7ae5a03-b4bb-4bb7-a8c0-79f3bd40c068",
@@ -437,7 +437,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "5a47a623-505d-4cc4-85d9-896b35e836cd",
@@ -448,7 +448,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "febac52a-8001-4e2e-abb5-9f0d67b46883",
@@ -459,7 +459,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "e6073231-701d-4fff-b811-1e1f7bfc7559",
@@ -470,7 +470,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "10599a2c-dc76-42aa-abd4-77e5e4f770e2",
@@ -481,7 +481,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "30f20dc0-2b53-4a88-92cd-6c329cad45a7",
@@ -492,7 +492,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "ab2e1ba1-8f5e-461c-b63d-bd8b4563b1a6",
@@ -503,7 +503,7 @@
       ],
       "tags": "javascript",
       "image": "https://i.imgur.com/VuRrf1r.png",
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "98292bb1-4d91-4189-8277-7d74646af20e",
@@ -514,7 +514,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "1bafacd6-86ea-4027-932c-3a650f6f3eb7",
@@ -525,7 +525,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "4bb11d67-6bb0-412b-89c9-67d0ef0b71de",
@@ -536,7 +536,7 @@
       ],
       "tags": "typescript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "7ae5c0a4-72c8-4000-8ebc-38d65e62ca59",
@@ -547,7 +547,7 @@
       ],
       "tags": "typescript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "5c703b90-a71d-4b12-bdf0-9424c65c53ec",
@@ -560,7 +560,7 @@
       ],
       "tags": "typescript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "e421b6ff-f571-4779-8af3-7f52273a9c9b",
@@ -574,7 +574,7 @@
       ],
       "tags": "typescript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "a11676e4-31ed-4e48-924a-f4ea82f1a518",
@@ -585,7 +585,7 @@
       ],
       "tags": "typescript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "a205b586-2be1-4368-b9bd-f6d439e1bbff",
@@ -596,7 +596,7 @@
       ],
       "tags": "typescript",
       "image": "https://i.imgur.com/L7DRGfX.png",
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "f6ca909b-833c-491c-a00d-777bedce6974",
@@ -607,7 +607,7 @@
       ],
       "tags": "typescript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "6e188344-da35-499e-b0fc-e082813fe584",
@@ -618,7 +618,7 @@
       ],
       "tags": "angular",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "3842cca5-8379-4f44-8f42-e1afb2993ea9",
@@ -629,7 +629,7 @@
       ],
       "tags": "angular",
       "image": "https://i.imgur.com/xtN8eiY.png",
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "b7d33106-b44f-4327-82c1-7080b6031af3",
@@ -641,7 +641,7 @@
       ],
       "tags": "angular",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "41baadf4-0ec2-4ae5-afdc-e43cb610c827",
@@ -653,7 +653,7 @@
       ],
       "tags": "angular",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "0dcd274b-c77a-4cfd-b004-90d8172f173c",
@@ -664,7 +664,7 @@
       ],
       "tags": "angular",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "f512d286-be05-4674-b887-649aeb77ffc7",
@@ -678,7 +678,7 @@
       ],
       "tags": "angular",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "85d9b0c2-25bf-40e1-b580-9bfc3055b850",
@@ -689,7 +689,7 @@
       ],
       "tags": "angular",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "78dfc406-2e29-4eda-addb-22b2ea8bbd26",
@@ -702,7 +702,7 @@
       ],
       "tags": "angular",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "905af520-157d-41f3-a443-e3c32dcf4336",
@@ -713,7 +713,7 @@
       ],
       "tags": "angular",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "0c1bc1f9-b7a7-4fa4-b200-ef86bc11b251",
@@ -724,7 +724,7 @@
       ],
       "tags": "angular",
       "image": "https://i.imgur.com/GOQWtcs.png",
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "9959566a-93a7-499d-b25b-0ce8a2490d7c",
@@ -738,7 +738,7 @@
       ],
       "tags": "angular",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "32da4340-ca4c-43c3-9c99-e62dd914c5c9",
@@ -751,7 +751,7 @@
       ],
       "tags": "angular",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "671171d3-2dd7-460d-ae68-e9074adce043",
@@ -762,7 +762,7 @@
       ],
       "tags": "angular",
       "image": "https://i.imgur.com/jolCsoV.png",
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "1e282e81-f169-4aa7-8201-bf0a5974da8d",
@@ -778,7 +778,7 @@
       ],
       "tags": "angular",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "d54a3335-8275-4272-8d0f-a57a0754fbe2",
@@ -789,7 +789,7 @@
       ],
       "tags": "angular",
       "image": "https://i.imgur.com/s0aUDar.png",
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "91177a09-4851-4347-af0a-b28d628556a3",
@@ -800,7 +800,7 @@
       ],
       "tags": "rxjs",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "ad01c4d3-437e-4071-84a2-f272bc2c3bad",
@@ -811,7 +811,7 @@
       ],
       "tags": "rxjs",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "1b6b04de-f380-4165-bf09-8baf0b50503d",
@@ -822,7 +822,7 @@
       ],
       "tags": "rxjs",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "bcaa9b48-1c9e-4716-8da0-09259424ed7c",
@@ -833,7 +833,7 @@
       ],
       "tags": "rxjs",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "b0e732b3-3453-4132-91bd-1222eb042a58",
@@ -844,7 +844,7 @@
       ],
       "tags": "rxjs",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "e87c30aa-f9c8-41ae-a33f-247df8cc9724",
@@ -855,7 +855,7 @@
       ],
       "tags": "rxjs",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "7d88a2ee-5759-442f-a833-db5118c23c1f",
@@ -866,7 +866,7 @@
       ],
       "tags": "rxjs",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "2c037e62-1d67-49ea-8df2-b3eda6df8b55",
@@ -880,7 +880,7 @@
       ],
       "tags": "rxjs",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "4782b0da-8c8e-4f93-8af6-a5034ab5fa28",
@@ -891,7 +891,7 @@
       ],
       "tags": "patterns",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "2a856219-a1b3-4d8d-b166-d272c10cf51d",
@@ -902,7 +902,7 @@
       ],
       "tags": "patterns",
       "image": "https://i.imgur.com/AFF0VT4.png",
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "6b486603-c109-4256-9979-0d34c7f460a2",
@@ -913,7 +913,7 @@
       ],
       "tags": "patterns",
       "image": "https://i.imgur.com/ABAYsWc.png",
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "174dfd26-a388-4a95-8d5e-fc534b8e2f8c",
@@ -924,7 +924,7 @@
       ],
       "tags": "patterns",
       "image": "https://i.imgur.com/AaolgmT.png",
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "8483ff92-eab0-4f8e-aabd-131c4ae28050",
@@ -935,7 +935,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "b4cf6d0f-4a86-4840-a8b0-a70a7f6d3e9b",
@@ -946,7 +946,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "7bfe8d3e-3e26-43a5-9c0f-26363616ea1f",
@@ -957,7 +957,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "af810dc1-828b-4830-ba94-ec3a517211f0",
@@ -968,7 +968,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "048d6ae7-ec5c-4668-9b65-f75ac6fc67bc",
@@ -979,7 +979,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "cb0c0b8e-40e1-4b0d-b716-d4245b20648c",
@@ -990,7 +990,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     },
     {
       "id": "ecddcf61-6c21-4f72-b972-d7ccf5ee48b7",
@@ -1001,7 +1001,7 @@
       ],
       "tags": "javascript",
       "image": null,
-      "favourite": false
+      "favorite": false
     }
   ]
 }

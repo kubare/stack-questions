@@ -119,12 +119,10 @@
               </button>
               <button
                 mat-menu-item
-                (click)="handleSetFavouriteQuestion(element)"
+                (click)="handleSetFavoriteQuestion(element)"
               >
                 {{
-                  element.favourite
-                    ? "Usuń z ulubionych"
-                    : "Dodaj do ulubionych"
+                  element.favorite ? "Usuń z ulubionych" : "Dodaj do ulubionych"
                 }}
               </button>
             </mat-menu>

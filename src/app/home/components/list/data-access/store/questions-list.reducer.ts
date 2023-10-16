@@ -50,7 +50,7 @@ export const questionsListReducer = createReducer(
       params: {
         title: action.title,
         tags: action.tags,
-        favourite: action.favourite,
+        favorite: action.favorite,
       },
       loadState: LoadingState.SUCCESS,
       error: null,

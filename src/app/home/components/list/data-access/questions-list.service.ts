@@ -22,8 +22,8 @@ export class QuestionsListService {
       });
     }
 
-    if (queryParams?.favourite) {
-      queryString += `favourite=${queryParams.favourite}`;
+    if (queryParams?.favorite) {
+      queryString += `favorite=${queryParams.favorite}`;
     }
 
     return this.http.get<QuestionsList[]>(

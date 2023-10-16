@@ -72,7 +72,7 @@ export class ListComponent {
       .pipe(
         tap((res) => {
           this.store.dispatch(
-            QuestionsListQueryParams({ title: res, tags: [], favourite: false })
+            QuestionsListQueryParams({ title: res, tags: [], favorite: false })
           );
           if (res) this.filterQuestionTags.disable();
           else this.filterQuestionTags.enable();
@@ -143,7 +143,7 @@ export class ListComponent {
       QuestionsListQueryParams({
         title: '',
         tags: [...this.selectedTags],
-        favourite: false,
+        favorite: false,
       })
     );
 
@@ -156,7 +156,7 @@ export class ListComponent {
       QuestionsListQueryParams({
         title: '',
         tags: [...this.selectedTags],
-        favourite: false,
+        favorite: false,
       })
     );
     this.filterQuestionTags.setValue(null);
@@ -189,17 +189,16 @@ export class ListComponent {
       .subscribe();
   }
 
-  handleSetFavouriteQuestion(question: QuestionsList) {
+  handleSetFavoriteQuestion(question: QuestionsList) {
     const favQuestion: QuestionsList = {
       ...question,
-      favourite: !question.favourite,
+      favorite: !question.favorite,
     };
 
     this.store.dispatch(QuestionEditRequest({ payload: favQuestion }));
     this.store.dispatch(QuestionsListLoad());
 
-    if (favQuestion.favourite)
-      this.snackBar.open('Dodano do ulubionych!', 'Ok');
+    if (favQuestion.favorite) this.snackBar.open('Dodano do ulubionych!', 'Ok');
     else this.snackBar.open('Usunięto z ulubionych!', 'Ok');
   }
 
@@ -219,7 +218,7 @@ export class ListComponent {
       QuestionsListQueryParams({
         title: '',
         tags: [...this.selectedTags],
-        favourite: this.favoriteQuestion.value ? true : false,
+        favorite: this.favoriteQuestion.value ? true : false,
       })
     );
   }

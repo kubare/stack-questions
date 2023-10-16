@@ -7,5 +7,5 @@ export interface QuestionsList {
   subpoints: (string | null)[];
   tags: Tags;
   image: string | null;
-  favourite: boolean;
+  favorite: boolean;
 }
