@@ -15,13 +15,15 @@ import { QuestionsList } from './models/questions-list.interface';
 import { Observable, Subject, takeUntil, tap } from 'rxjs';
 import { selectQuestions } from './data-access/store/questions-list.selectors';
 import { QuestionDialogComponent } from '../question-dialog/question-dialog.component';
-import { UntypedFormControl } from '@angular/forms';
+import { FormControl, UntypedFormControl } from '@angular/forms';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { MatDialog } from '@angular/material/dialog';
 import { QuestionFormComponent } from '../question-form/question-form.component';
 import { allTags } from '../../shared/models/tags.constant';
 import { QuestionRemoveComponent } from '../question-remove/question-remove.component';
+import { QuestionEditRequest } from '../question-form/data-access/edit/question-edit.actions';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-list',
@@ -50,11 +52,16 @@ export class ListComponent {
   expandedElement: QuestionsList | null;
   filterQuestionTitle = new UntypedFormControl('');
   filterQuestionTags = new UntypedFormControl('');
+  favoriteQuestion = new FormControl(false);
   selectedTags: string[] = [];
   allTags = allTags;
   destroy$ = new Subject();
 
-  constructor(private store: Store, public dialog: MatDialog) {}
+  constructor(
+    private store: Store,
+    public dialog: MatDialog,
+    private snackBar: MatSnackBar
+  ) {}
 
   ngOnInit(): void {
     this.store.dispatch(QuestionsListLoad());
@@ -65,7 +72,7 @@ export class ListComponent {
       .pipe(
         tap((res) => {
           this.store.dispatch(
-            QuestionsListQueryParams({ title: res, tags: [] })
+            QuestionsListQueryParams({ title: res, tags: [], favourite: false })
           );
           if (res) this.filterQuestionTags.disable();
           else this.filterQuestionTags.enable();
@@ -133,7 +140,11 @@ export class ListComponent {
       this.selectedTags.splice(index, 1);
     }
     this.store.dispatch(
-      QuestionsListQueryParams({ title: '', tags: [...this.selectedTags] })
+      QuestionsListQueryParams({
+        title: '',
+        tags: [...this.selectedTags],
+        favourite: false,
+      })
     );
 
     this.allTags.unshift(fruit);
@@ -142,7 +153,11 @@ export class ListComponent {
   selected(event: MatAutocompleteSelectedEvent): void {
     this.selectedTags.push(event.option.viewValue);
     this.store.dispatch(
-      QuestionsListQueryParams({ title: '', tags: [...this.selectedTags] })
+      QuestionsListQueryParams({
+        title: '',
+        tags: [...this.selectedTags],
+        favourite: false,
+      })
     );
     this.filterQuestionTags.setValue(null);
   }
@@ -172,6 +187,41 @@ export class ListComponent {
         })
       )
       .subscribe();
+  }
+
+  handleSetFavouriteQuestion(question: QuestionsList) {
+    const favQuestion: QuestionsList = {
+      ...question,
+      favourite: !question.favourite,
+    };
+
+    this.store.dispatch(QuestionEditRequest({ payload: favQuestion }));
+    this.store.dispatch(QuestionsListLoad());
+
+    if (favQuestion.favourite)
+      this.snackBar.open('Dodano do ulubionych!', 'Ok');
+    else this.snackBar.open('Usunięto z ulubionych!', 'Ok');
+  }
+
+  displayFavsQuestions() {
+    this.selectedTags = [];
+    this.filterQuestionTitle.reset();
+
+    if (this.favoriteQuestion.value) {
+      this.filterQuestionTitle.disable();
+      this.filterQuestionTags.disable();
+    } else {
+      this.filterQuestionTitle.enable();
+      this.filterQuestionTags.enable();
+    }
+
+    this.store.dispatch(
+      QuestionsListQueryParams({
+        title: '',
+        tags: [...this.selectedTags],
+        favourite: this.favoriteQuestion.value ? true : false,
+      })
+    );
   }
 
   ngOnDestroy() {
