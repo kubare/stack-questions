@@ -21,14 +21,17 @@ export class QuestionsListService {
         queryString += `tags=${tag}&`;
       });
     }
-    queryString = queryString.slice(0, -1);
+
+    if (queryParams?.favorite) {
+      queryString += `favorite=${queryParams.favorite}`;
+    }
 
     return this.http.get<QuestionsList[]>(
       `http://localhost:3000/questions${queryString}`
     );
   }
 
-  add(question?: QuestionsList): Observable<QuestionsList> {
+  add(question: QuestionsList): Observable<QuestionsList> {
     return this.http.post<QuestionsList>(
       'http://localhost:3000/questions',
       question
@@ -41,7 +44,7 @@ export class QuestionsListService {
     );
   }
 
-  edit(question?: QuestionsList): Observable<QuestionsList> {
+  edit(question: QuestionsList): Observable<QuestionsList> {
     return this.http.put<QuestionsList>(
       `http://localhost:3000/questions/${question?.id}`,
       question

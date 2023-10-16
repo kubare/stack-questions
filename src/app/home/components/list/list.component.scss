@@ -22,6 +22,13 @@ tr.example-element-row:not(.example-expanded-row):hover {
 
   &__buttons{
     display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 4px;
+  }
+
+  &__normal-btns {
+    display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     padding-bottom: 22px;

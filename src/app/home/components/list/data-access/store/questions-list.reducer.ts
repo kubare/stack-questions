@@ -47,7 +47,11 @@ export const questionsListReducer = createReducer(
     QuestionsListQueryParams,
     (state, action): QuestionsListState => ({
       ...state,
-      params: { title: action.title, tags: action.tags },
+      params: {
+        title: action.title,
+        tags: action.tags,
+        favorite: action.favorite,
+      },
       loadState: LoadingState.SUCCESS,
       error: null,
     })
