@@ -90,6 +90,7 @@
             <span>{{ element[column.value] }}</span>
             <span
               *ngIf="element.favorite && column.value === 'title'"
+              matTooltip="Ulubione pytanie"
               class="box__dot"
             ></span>
           </div>
