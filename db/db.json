@@ -159,7 +159,7 @@
       ],
       "tags": "css",
       "image": null,
-      "favorite": false
+      "favorite": true
     },
     {
       "id": "a6f3c7a0-a563-474c-b3c9-c5c7a27c695e",
@@ -320,24 +320,24 @@
     {
       "id": "e892da9b-1d07-4cc3-a33f-d3d130b5e5f2",
       "title": "Promisy co to jest ?",
-      "answer": "Jest to obiekt, który ma dostępna wartość, czeka na nią lub nigdy jej nie dostanie. Promisy \twykonują się asynchornicznie i są używane na przykład do zapytań api. Przy promisach używamy funkcji zwrotnej .then() która nam zwraca poprawny rezultat jak i negatywny rezultat. Do obsługi bledow możemy uzyc funkcji .catch() ",
+      "answer": "Jest to obiekt, który ma dostępna wartość, czeka na nią lub nigdy jej nie dostanie. Promisy \twykonują się asynchornicznie i są używane na przykład do zapytań api. Przy promisach używamy funkcji zwrotnej .then() która nam zwraca poprawny rezultat jak i negatywny rezultat. Do obsługi bledow możemy uzyc funkcji .catch().\nIstnieją trzy stany promisa:",
       "subpoints": [
-        ""
+        "pending, resolved, rejected"
       ],
       "tags": "javascript",
-      "image": null,
-      "favorite": false
+      "image": null
     },
     {
       "id": "813b3983-6553-4b5c-85ee-bac74ad5a4a8",
       "title": "Var vs let vs const",
-      "answer": "Var w odroznieniu do let/const działa tak, że można się odwolac do zmiennej var przed jej \timplementacja. Dla let/const tak to nie działa. Dodatkowo let używamy do zmiennych \t\tdynaminczych, które zmieniają swoją referencje w trakcie działania aplikacji. Const jest\tzmienną stałą, nie jest zmieniana jej wartość podczas działania aplikacji ",
+      "answer": "Są to rodzaje zmiennych, które charakteryzują się:",
       "subpoints": [
-        ""
+        "var - jest dostępną zmienna globalnie oraz w danym bloku kodu (np. funkcja). Dostęp w zakresie globalnym powoduje, że posiadając dwie zmienne o tej samej nazwie w róznym scopie to jedna redefiniuje drugą co może powodować bugi w kodzie. Dodatkowo możemy odwołać się do niej, przed jej implementacją co jest złą praktyką.",
+        "let - zmienna gdzie jest dostępna w danym bloku kodu. Let jest dynamiczne, możemy zmieniać jej wartość ale jej nie redefiniować.",
+        "const - podobnie jak let jest dostepne w danym bloku kodu. Jednak jest statyczne i nie mozemy edytować wartości w trakcie działania aplikacji."
       ],
       "tags": "javascript",
-      "image": null,
-      "favorite": false
+      "image": "https://i.imgur.com/bDdgbec.png"
     },
     {
       "id": "3ce503c9-059a-492b-a007-22ec824e02cd",
@@ -928,25 +928,13 @@
     },
     {
       "id": "8483ff92-eab0-4f8e-aabd-131c4ae28050",
-      "title": "Podaj różnicę między funkcją normalną a funkcją z użyciem keyword ‘async’.",
-      "answer": "Jedyną różnicą między funkcją zwykłą a funkcją zwykłą, jest to, że funkcja async zawsze zwraca promisa.\n",
+      "title": "Jak działa funkcja async/await?",
+      "answer": "Funkcja z slowem klucz async zwraca zawsze Promisa i działa asynchornicznie. Słowo klucz await czeka na wynik Promisa zanim będzie kontynuował wykonanie. Slowo klucz await mozna uzyc tylko w funkcji async.\n",
       "subpoints": [
         ""
       ],
       "tags": "javascript",
-      "image": null,
-      "favorite": false
-    },
-    {
-      "id": "b4cf6d0f-4a86-4840-a8b0-a70a7f6d3e9b",
-      "title": "Czy możemy użyć słowa await poza funkcją async?",
-      "answer": "Nie mozemy",
-      "subpoints": [
-        ""
-      ],
-      "tags": "javascript",
-      "image": null,
-      "favorite": false
+      "image": null
     },
     {
       "id": "7bfe8d3e-3e26-43a5-9c0f-26363616ea1f",
@@ -971,37 +959,221 @@
       "favorite": false
     },
     {
-      "id": "048d6ae7-ec5c-4668-9b65-f75ac6fc67bc",
-      "title": "Podaj trzy stany promise",
-      "answer": "Pending, resolved, rejected",
-      "subpoints": [
-        ""
-      ],
-      "tags": "javascript",
-      "image": null,
-      "favorite": false
-    },
-    {
       "id": "cb0c0b8e-40e1-4b0d-b716-d4245b20648c",
       "title": "Na czym polega bind()?",
-      "answer": "Użycie bind() w odróznieniu do call/apply nie wywołuje funkcji a jedynie zwraca ją z nowo przypisanymi wartościami.",
+      "answer": "Użycie bind() w odróznieniu do call/apply nie wywołuje funkcji a zwraca nową funkcje z interesującym nas contextem",
       "subpoints": [
         ""
       ],
       "tags": "javascript",
-      "image": null,
-      "favorite": false
+      "image": "https://i.imgur.com/ihyT2pn.png"
     },
     {
       "id": "ecddcf61-6c21-4f72-b972-d7ccf5ee48b7",
       "title": "Czym jest przeciążanie funkcji, czy istnieje w JS?",
-      "answer": "Przeciążanie funkcji polega na tym, że dana funkcja zachowuje się inaczej w\nzależności od przyjętej ilości argumentów. Można nadpisać funkcję tak aby przy\ninnej ilości argumentów funkcja zachowała się inaczej. W JavaScriptcie\nmechanizm przeciążania funkcji nie istnieje\n",
+      "answer": "Przeciążenie funkcji to występowanie pod taką samą nazwą wielu funkcji różniących się zestawem argumentów. W trakcie kompilacji bądź parsowania program znajduje właściwą funkcję po liczbie oraz typach argumentów.\nW JavaScriptcie mechanizm przeciążania funkcji nie istnieje\n",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "bf576610-4ee5-4cbb-a4a2-f30cfdecaac0",
+      "title": "Jakie są sposoby do debuggowania kodu?",
+      "answer": "   ",
+      "subpoints": [
+        "debugger - dodanie do kodu słowka klucz 'debugger'. Kod wykona sie do pojawienia się tego słowa i sprawdzi czy kod działa poprawinie. Jeżeli wyrzuci błąd to pokaze gdzie dokładnie jest",
+        "console.log",
+        "Chrome DevTools"
+      ],
+      "tags": "javascript",
+      "image": null,
+      "favorite": true
+    },
+    {
+      "id": "f621b250-0ac4-4eaa-b35d-cc408993021f",
+      "title": "Czym jest destrukturyzacja?",
+      "answer": "Destrukturyzacja to wyrażenie które umożliwia zwięzły i wygodny sposób na wydobycie wartości Obiektów (Objects) lub Tablic (Arrays) i umieszczenie ich w odrębnych zmiennych.",
       "subpoints": [
         ""
       ],
       "tags": "javascript",
       "image": null,
-      "favorite": false
+      "favorite": true
+    },
+    {
+      "id": "20cb41ce-c020-4833-8983-3e7db5a287a8",
+      "title": "Czym jest spread syntax i jak go użyć?",
+      "answer": "Służy do tworzenia kopii tablic lub obiektów. Używamy go przez użycie trzech kropek i nazwy tablicy/obiektu który kopiujemy",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": "https://i.imgur.com/wBMgggv.png",
+      "favorite": true
+    },
+    {
+      "id": "31f969f3-dfa1-4b92-be4a-a285cde0d92e",
+      "title": "Czym jest tablica asocjacyjną?",
+      "answer": "Normalnie tablice są indeksowane liczbami. Liczby zawsze zaczynają się od 0. Tablica asocjacyjna różni się od zwykłej tablicy tym, że do indeksowania są wykorzystywane ciągi znaków",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": "https://i.imgur.com/SCYr5Da.png",
+      "favorite": true
+    },
+    {
+      "id": "4df47977-727d-4f5e-864b-39c6e6f64f09",
+      "title": "Czym jest typ never?",
+      "answer": "Typ Never reprezentuje typ wartości, który nigdy nie wystąpi. Na przykład Never jest typem zwracanym przez funkcje, która nic nie zwróci.",
+      "subpoints": [
+        ""
+      ],
+      "tags": "typescript",
+      "image": null,
+      "favorite": true
+    },
+    {
+      "id": "6f0742e9-a6a8-445d-b825-7b6b14a1fffc",
+      "title": "Co to jest distinctUntilChanged()?",
+      "answer": "Jeżeli nie chcemy, aby w strumieniu danych pojawiły się kolejno dwie takie same wartości, to możemy skorzystać z operatora distinctUntilChanged.",
+      "subpoints": [
+        ""
+      ],
+      "tags": "rxjs",
+      "image": null,
+      "favorite": true
+    },
+    {
+      "id": "d47cd501-3afa-4df8-b88c-19ce6a7af990",
+      "title": "Czym jest IIFE i jak ją tworzymy?",
+      "answer": "Funkcja, która wykonuje się od razu. Tworzymy ją jako funkcja anonimowa, czyli funkcja bez nazwy.",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null,
+      "favorite": true
+    },
+    {
+      "id": "9a8cf880-df2d-49c2-8dbb-c6df9527729b",
+      "title": "Czym jest DOCTYPE?",
+      "answer": "Deklaracji doctype dokonujemy na samym początku pliku html, na samej górze, na pierwszej linii kodu. Deklaracja ta informuje przeglądarkę o rodzaju dokumentu, który ma przetworzyć.",
+      "subpoints": [
+        ""
+      ],
+      "tags": "html",
+      "image": "https://i.imgur.com/YuD1ON1.png",
+      "favorite": true
+    },
+    {
+      "id": "fcd6ebbf-d366-43cd-af55-dbd50d6460f5",
+      "title": "Co oznacza właściwość float?",
+      "answer": "Służy do pozycjonowania elementow. Wykorzystujemy ją np do ułozenia zdjecia względem tekstu. Własciwość float może przyjąć wartość left/right/up/down",
+      "subpoints": [
+        ""
+      ],
+      "tags": "css",
+      "image": null,
+      "favorite": true
+    },
+    {
+      "id": "c3bd4aae-3de2-42ee-aba0-aff6b6515474",
+      "title": "Czym są sygnały?",
+      "answer": "Sygnały przechowują w sobie jakąs wartość i Angular informuje zainteresowane konteksty (np. komponent) że została wartośc w sygnale nadpisana. Dzięki temu dany kontekst odświeża dynamicznie widok i użykownik widzi nową wartość. Jest to podobne działanie do Subjectow jednak sygnały są prostsze w użyciu. W subjectach musimy sie subskrybować aby otrzymać informacje o danej wartości, gdzie Angular sam wykrywa zmiany w sygnałach i nadpisuje wartość. Sygnały mogą przetrzymywać wartości proste (np. wartość liczbowa) lub wartości złozone (np. spore obiekty). Wyróżniamy dwa rodzaje sygnałow:",
+      "subpoints": [
+        "Sygnały zapisywalne - możemy bezpośrednio modyfikować ich wartość. Aby utworzyć zapisywalny sygnał, musimy wywołać funkcję signal(), podając jej wartość początkową jako argument. Każdy sygnał musi zawsze mieć wartość. Sygnały zapisywalne modyfikujemy przez słowo klucz .set() lub .update()",
+        "Sygnał obliczany - czerpie swoją wartość z innych sygnałów. Aby go zdefiniować, używamy funkcji computed()"
+      ],
+      "tags": "angular",
+      "image": "https://i.imgur.com/jeT3lP7.png"
+    },
+    {
+      "id": "e10906dd-5af9-4293-801b-c33a0633d801",
+      "title": "Jakie są typy w JS?",
+      "answer": "Dostępne typy to:",
+      "subpoints": [
+        "Number",
+        "String",
+        "Boolean",
+        "Object - JavaScript object",
+        "null - a special value that represents \"nothing\", \"empty\", or \"unknown value\".",
+        "undefined - \"value has not been assigned\". This type is assigned if a variable is declared but has no assigned value."
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "3c88f48f-256c-45d7-8d43-367fb22806e9",
+      "title": "Co to są template literals?",
+      "answer": "Służa do dynamicznego modyfikowania wartości w stringu. Używamy tego aby w jakimś stringu dodać wartośc, która zmienia się w trakcie działania aplikacji.",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": "https://i.imgur.com/OfXpgro.png"
+    },
+    {
+      "id": "b4e8bb84-1f9e-4511-b6cb-c8a0d86ca916",
+      "title": "Czym jest Map i Set?",
+      "answer": "Map is a collection, a data structure that operates on the rule of key-value pairs, similar to Objects. However, the main difference between Map and Object is that Map allows the use of keys of any type.\nSet is a type of collection without keys, an array where each value can only appear once. Set stores unique values within itself.",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "7e41a36f-9688-4d4f-a8df-8efd90c64b5d",
+      "title": "Jak sprawdzić czy dane pole (property) w obiekcie istnieje?",
+      "answer": "Mozna uzyc funkcji JS hasOwnProperty() lub w console.log wpisać nazwe sprawdzanego pola.",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": "https://i.imgur.com/0GKgVnz.png"
+    },
+    {
+      "id": "7d30dd46-0dce-4c90-83da-46fba9a45e5a",
+      "title": "Co to jest ternary operator (operator trój-argumentowy)?",
+      "answer": "A ternary operator is a shorthand notation for an if-else statement. The operator is represented by a question mark and a colon.",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": null
+    },
+    {
+      "id": "c58c9c90-1925-4698-96e0-fbf48da39d1e",
+      "title": "Co to jest DOM?",
+      "answer": "DOM stands for Document Object Model. It is a representation of an HTML document as a tree of tags. Each node in the DOM tree is an object.\nExample: ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": "https://i.imgur.com/iOJQLJO.png"
+    },
+    {
+      "id": "ead6a2d7-7499-4024-80f7-d173f8133178",
+      "title": "Czym jest Optional chaining (?.)?",
+      "answer": "Za jego pomocą możemy wykonać proste sprawdzenie, czy kolejne właściwości obiektu istnieją, zanim nastąpi próba ich odczytania. Widzimy w tym przypadku, że zanim odwołam się do pola name to operator sprawdza wcześniej, czy obiekt person istnieje. Jeżeli właściwość, do której się odwołujemy nie\nistnieje to zwracana jest wartość undefined\ni nie zostanie zwrócony błąd przez JavaScript.",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": "https://i.imgur.com/IvFTwEM.png"
+    },
+    {
+      "id": "06638294-5f39-4632-80fd-47a4877e3a05",
+      "title": "Co to jest Shadow DOM?",
+      "answer": "Shadow DOM pozwala nam na stworzenie kolejnej gałęzi drzewa DOM, której style i własciwiości nie wpływają na reszte drzewa DOM. Pozwala nam to na tworzenie Web Componentow lub róznych Widgetów. ",
+      "subpoints": [
+        ""
+      ],
+      "tags": "javascript",
+      "image": ""
     }
   ]
 }
