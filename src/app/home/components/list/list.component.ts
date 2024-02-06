@@ -49,7 +49,7 @@ export class ListComponent<T> {
   questionsList$: Observable<QuestionsList[]>;
   dataSource: QuestionsList[];
   columnsToDisplay = [
-    { label: `Nazwa pytania`, value: 'title' },
+    { label: 'Nazwa pytania', value: 'title' },
     { label: 'Tagi', value: 'tags' },
     { label: '', value: 'actions' },
   ];
@@ -80,13 +80,10 @@ export class ListComponent<T> {
       .pipe(
         tap((res) => {
           this.questionsCount = res.length;
-          console.log(this.questionsCount);
         }),
         takeUntil(this.destroy$)
       )
       .subscribe();
-
-    console.log(this.questionsCount);
 
     this.filterQuestionTitle.valueChanges
       .pipe(
