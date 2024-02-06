@@ -45,7 +45,7 @@ interface SelectOption<T> {
     ]),
   ],
 })
-export class ListComponent<T> {
+export class ListComponent {
   questionsList$: Observable<QuestionsList[]>;
   dataSource: QuestionsList[];
   columnsToDisplay = [
