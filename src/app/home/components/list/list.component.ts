@@ -25,6 +25,11 @@ import { QuestionRemoveComponent } from '../question-remove/question-remove.comp
 import { QuestionEditRequest } from '../question-form/data-access/edit/question-edit.actions';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
+interface SelectOption<T> {
+  value: T;
+  label: string;
+}
+
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -50,11 +55,14 @@ export class ListComponent {
   ];
   columnsValues = this.columnsToDisplay.map((a) => a.value);
   expandedElement: QuestionsList | null;
+
   filterQuestionTitle = new UntypedFormControl('');
   filterQuestionTags = new UntypedFormControl('');
   favoriteQuestion = new FormControl(false);
   selectedTags: string[] = [];
   allTags = allTags;
+
+  questionsCount: number = 0;
   destroy$ = new Subject();
 
   constructor(
@@ -67,6 +75,15 @@ export class ListComponent {
     this.store.dispatch(QuestionsListLoad());
     this.questionsList$ = this.store.select(selectQuestions);
     this.addQuestionsToTable();
+
+    this.questionsList$
+      .pipe(
+        tap((res) => {
+          this.questionsCount = res.length;
+        }),
+        takeUntil(this.destroy$)
+      )
+      .subscribe();
 
     this.filterQuestionTitle.valueChanges
       .pipe(
