@@ -86,7 +86,12 @@
           matColumnDef="{{ column.value }}"
           *ngFor="let column of columnsToDisplay"
         >
-          <th mat-header-cell *matHeaderCellDef>{{ column.label }}</th>
+          <th mat-header-cell *matHeaderCellDef>
+            {{ column.label }}
+            <span *ngIf="column.label === 'Nazwa pytania'"
+              >({{ questionsCount }})</span
+            >
+          </th>
           <td mat-cell *matCellDef="let element">
             <div *ngIf="column.value !== 'tags'; else tag" class="box__title">
               <span>{{ element[column.value] }}</span>
